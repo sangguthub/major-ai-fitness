@@ -1,0 +1,63 @@
+[
+  {
+    "id": "mock-user-123",
+    "email": "test@example.com",
+    "passwordHash": "$2a$10$tM2800G5Q/d5yX.G2A74T.K4sC/r9Z6tK3b5fB0lK9T8F0vE0/vF",
+    "name": "Test User",
+    "profile": {
+      "age": 30,
+      "gender": "male",
+      "height": 175,
+      "weight": 78,
+      "activityLevel": 1,
+      "dietPreference": "veg",
+      "existingConditions": []
+    }
+  },
+  {
+    "id": "6bd105a8-e550-45cb-ad53-2de0766e2085",
+    "email": "newuser@example.com",
+    "name": "New Tester",
+    "passwordHash": "$2a$10$oskzdTyJmWTtRA1X0IMcxeAVF4M/5rrQnLxpDSs4i/HgONOHWVWeO",
+    "profile": {
+      "existingConditions": [],
+      "age": 25,
+      "gender": "female",
+      "height": 165,
+      "weight": 60,
+      "activityLevel": 1,
+      "dietPreference": "veg",
+      "bmi": 22.04,
+      "bmr": 1345
+    },
+    "createdAt": "2025-11-19T09:22:44.105Z"
+  },
+  {
+    "id": "52167885-e09b-4872-8717-fe20b38b11be",
+    "email": "sangappay7@gmail.com",
+    "name": "sang",
+    "passwordHash": "$2a$10$WkqTXWFKWYPwJxHaauF3.ObTa6JalAsDTnlfjq4FugRD4eJyjtG8S",
+    "profile": {
+      "existingConditions": [],
+      "age": 21,
+      "gender": "male",
+      "height": 144,
+      "weight": 48,
+      "activityLevel": 0,
+      "dietPreference": "non-veg",
+      "bmi": 23.15,
+      "bmr": 1280
+    },
+    "createdAt": "2025-11-19T09:54:57.408Z"
+  },
+  {
+    "id": "ee6745df-80b8-4a52-9cf1-f859b89f2dfa",
+    "email": "sangappay5@gmail.com",
+    "name": "sangappa",
+    "passwordHash": "$2a$10$NcKgoWYDUaooB1zMgGONaOR6yRHQS1T3BJdIj9Ya2A4DUNcOswHeO",
+    "profile": {
+      "existingConditions": []
+    },
+    "createdAt": "2025-11-21T04:01:07.647Z"
+  }
+]

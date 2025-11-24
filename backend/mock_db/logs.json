@@ -1,0 +1,5647 @@
+[
+  {
+    "userId": "6bd105a8-e550-45cb-ad53-2de0766e2085",
+    "type": "risk_assessment",
+    "date": "2025-11-19T09:28:51.776Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 92,
+      "Low": 0,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 35,
+      "age": 40,
+      "gender": 1,
+      "family_history": 1,
+      "activity_level": 0,
+      "sleep_time": 5.5,
+      "junk_food_freq": 2
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:16:17.500Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 2
+    }
+  },
+  {
+    "logId": "meal-1763698600827",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T04:16:40.827Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 241,
+    "macroBreakdown": {
+      "Carbohydrates": 48,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:17:45.876Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 81,
+      "Medium": 19
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 9,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:18:02.319Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1763698704348",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T04:18:24.348Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 320,
+    "macroBreakdown": {
+      "Carbohydrates": 64,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1763698913243",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T04:21:53.243Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 356,
+    "macroBreakdown": {
+      "Carbohydrates": 71,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/https://thebigmansworld.com/wp-content/uploads/2024/05/strawberry-ice-cream-recipe2.jpg"
+  },
+  {
+    "logId": "meal-1763698923578",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T04:22:03.578Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 313,
+    "macroBreakdown": {
+      "Carbohydrates": 63,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/https://thebigmansworld.com/wp-content/uploads/2024/05/strawberry-ice-cream-recipe2.jpg"
+  },
+  {
+    "logId": "meal-1763698930090",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T04:22:10.090Z",
+    "mealType": "Snack",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 303,
+    "macroBreakdown": {
+      "Carbohydrates": 61,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/https://thebigmansworld.com/wp-content/uploads/2024/05/strawberry-ice-cream-recipe2.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:16.797Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 25,
+      "Medium": 74
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 2
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:18.051Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:18.938Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:19.835Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:20.690Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:21.544Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:24.191Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:25.072Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:25.922Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:26.777Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:27.655Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:45.471Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:51.714Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:29:52.590Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:30:00.610Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:30:02.969Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 92,
+      "Medium": 7
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:30:27.528Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:30:28.519Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:30:29.522Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:30:35.771Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:31:14.486Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:31:15.487Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:31:16.417Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:31:17.339Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:31:18.253Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:31:19.152Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:31:20.000Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:31:20.920Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:32:21.926Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:32:22.845Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:32:23.689Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1763699550362",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T04:32:30.362Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 338,
+    "macroBreakdown": {
+      "Carbohydrates": 68,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:32:32.486Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1763699554606",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T04:32:34.606Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 259,
+    "macroBreakdown": {
+      "Carbohydrates": 52,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:32:38.868Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:33:41.370Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:33:42.276Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:33:43.159Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:33:44.066Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:12.764Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:13.808Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:14.702Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:15.614Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:18.912Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:22.255Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 87,
+      "Medium": 12
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:23.085Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:24.254Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:24.350Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:35.387Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 21,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 6,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:51.001Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 20,
+      "Medium": 80
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 5,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:51.869Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:52.728Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:53.594Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:54.490Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:55.365Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:34:59.268Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 20,
+      "Medium": 79
+    },
+    "inputParams": {
+      "bmi": 24.06,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:37:00.218Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:37:01.265Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:45:58.063Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 25.1,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:45:59.182Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 25.1,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:46:00.085Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 25.1,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:46:00.942Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 25.1,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:46:01.752Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 25.1,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:46:02.548Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 25.1,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:46:03.682Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 25.1,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:46:04.706Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 25.1,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:46:05.622Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 25.1,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:46:06.497Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 25.1,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:46:07.451Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 25.1,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:46:08.335Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 25.1,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:46:09.175Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 25.1,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1763700520077",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T04:48:40.077Z",
+    "mealType": "Snack",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 338,
+    "macroBreakdown": {
+      "Carbohydrates": 68,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1763700536580",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T04:48:56.580Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 272,
+    "macroBreakdown": {
+      "Carbohydrates": 54,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1763700537867",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T04:48:57.867Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 252,
+    "macroBreakdown": {
+      "Carbohydrates": 50,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:56:03.665Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.82,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:56:04.717Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.82,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:56:05.622Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.82,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:56:06.504Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.82,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:56:07.314Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.82,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:56:08.195Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.82,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:56:09.036Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.82,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T04:57:10.482Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.82,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:00:30.794Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.82,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:00:31.717Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.82,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:00:56.472Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:00:57.614Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:00:59.071Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:00:59.989Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:01:01.058Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:01:01.958Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:01:02.838Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:01:03.659Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:01:04.593Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:01:05.469Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:01:06.492Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:01:07.378Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:01:08.550Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.68,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:04:00.160Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:04:01.148Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:04:02.803Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:04:03.664Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:04:04.559Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:04:05.431Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:04:06.306Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:04:07.139Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:04:07.934Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 17,
+      "Medium": 81
+    },
+    "inputParams": {
+      "bmi": 24.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:13:53.778Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:13:56.726Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:13:57.811Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:13:58.709Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:13:59.577Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:00.385Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:01.161Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:01.982Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:03.009Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:03.903Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:04.735Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:05.729Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:06.710Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:07.539Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:08.317Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:09.269Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:10.219Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:11.034Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:11.882Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:12.679Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:13.476Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:14.429Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:15.235Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:16.222Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:17.225Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:18.068Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:19.049Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:19.935Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:20.690Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:21.688Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:22.664Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:23.708Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:24.738Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:25.709Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:26.688Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:28.109Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:28.972Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:38.400Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 83,
+      "Medium": 17
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 6,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:39.532Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:40.461Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:41.326Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:42.147Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:14:42.966Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 27,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 30.02,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1763702086107",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T05:14:46.107Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 249,
+    "macroBreakdown": {
+      "Carbohydrates": 50,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:21.886Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:22.970Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:24.709Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:25.620Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:26.517Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:27.443Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:28.407Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:29.357Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:30.276Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:31.135Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:32.211Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:33.055Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:33.974Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:34.823Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:19:35.637Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 16,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 26.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:30.950Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:34.188Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:35.054Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:35.868Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:36.876Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:37.786Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:39.777Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:40.575Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:41.423Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:42.404Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:43.735Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:44.590Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:45.445Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:46.374Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:47.179Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:47.901Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:50.654Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:51.531Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:52.522Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:53.401Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:54.279Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:55.293Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:56.116Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:57.011Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:28:58.424Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 5,
+      "Low": 24,
+      "Medium": 71
+    },
+    "inputParams": {
+      "bmi": 29.4,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:35:39.799Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:36:07.982Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:36:10.031Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:36:10.967Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:36:29.132Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1763703470671",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T05:37:50.671Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 353,
+    "macroBreakdown": {
+      "Carbohydrates": 71,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:40:26.710Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:40:29.168Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 35,
+      "Medium": 64
+    },
+    "inputParams": {
+      "bmi": 18.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:45:42.066Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:45:43.503Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1763703960141",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T05:46:00.141Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 292,
+    "macroBreakdown": {
+      "Carbohydrates": 58,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:46:50.935Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:46:52.782Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:46:53.636Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:00.745Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 79,
+      "Medium": 21
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 4.5,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:01.632Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:02.499Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:07.312Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 9,
+      "Medium": 91
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 2
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:12.011Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:13.723Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:14.523Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:15.477Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:19.594Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 12,
+      "Low": 4,
+      "Medium": 84
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:20.534Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:24.182Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:25.024Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:40.459Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:41.349Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:42.171Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:47:43.061Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1763704064591",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T05:47:44.591Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 281,
+    "macroBreakdown": {
+      "Carbohydrates": 56,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:48:35.175Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:48:36.905Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T05:48:37.766Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 24,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 22.39,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:23:27.941Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:23:29.826Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:23:30.591Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:23:31.263Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:23:32.080Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:23:32.723Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:25:16.586Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:25:22.387Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:25:27.604Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:25:37.006Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:25:38.882Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:25:39.667Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:25:40.450Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:25:41.275Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1763706343170",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T06:25:43.170Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 276,
+    "macroBreakdown": {
+      "Carbohydrates": 55,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:30:13.923Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:30:24.067Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:30:29.364Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:30:33.856Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 21,
+      "Medium": 75
+    },
+    "inputParams": {
+      "bmi": 32.71,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:35:08.355Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:37:59.374Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:38:00.673Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:38:04.057Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:38:05.077Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:38:06.138Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:38:07.286Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:38:08.332Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:38:09.510Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:38:10.567Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T06:38:15.227Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1763713563258",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-21T08:26:03.258Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 286,
+    "macroBreakdown": {
+      "Carbohydrates": 57,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T08:27:54.829Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T08:27:56.485Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T08:27:58.940Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T08:28:00.220Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T08:28:01.395Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T08:28:02.481Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T08:28:03.509Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-21T08:28:04.763Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 3,
+      "Medium": 96
+    },
+    "inputParams": {
+      "bmi": 25.26,
+      "age": 54,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-24T05:28:10.286Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 80,
+      "Medium": 20
+    },
+    "inputParams": {
+      "bmi": 23.15,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 5,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "logId": "meal-1763962106567",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-24T05:28:26.567Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 351,
+    "macroBreakdown": {
+      "Carbohydrates": 70,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-24T05:29:05.477Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 22,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 23.15,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-24T05:29:23.524Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 22,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 23.15,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-24T05:29:28.926Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 22,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 23.15,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-24T05:29:35.856Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 22,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 23.15,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-24T05:29:45.565Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 22,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 23.15,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-24T05:29:55.792Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 22,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 23.15,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-24T05:30:08.452Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 22,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 23.15,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-24T05:31:36.342Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 22,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 23.15,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-24T05:31:46.292Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 22,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 23.15,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1763962340904",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-24T05:32:20.904Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 268,
+    "macroBreakdown": {
+      "Carbohydrates": 54,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-24T05:38:53.483Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 22,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 23.15,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-24T05:39:17.867Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 86,
+      "Medium": 14
+    },
+    "inputParams": {
+      "bmi": 23.15,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 8.5,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "logId": "meal-1763962801891",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-11-24T05:40:01.891Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 264,
+    "macroBreakdown": {
+      "Carbohydrates": 53,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  }
+]
