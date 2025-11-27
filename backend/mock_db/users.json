@@ -41,12 +41,13 @@
       "existingConditions": [],
       "age": 21,
       "gender": "male",
-      "height": 144,
-      "weight": 48,
-      "activityLevel": 0,
+      "height": 173,
+      "weight": 30,
+      "activityLevel": 1,
       "dietPreference": "non-veg",
-      "bmi": 23.15,
-      "bmr": 1280
+      "bmi": 10.02,
+      "bmr": 1281,
+      "goal": "lose"
     },
     "createdAt": "2025-11-19T09:54:57.408Z"
   },
@@ -59,5 +60,24 @@
       "existingConditions": []
     },
     "createdAt": "2025-11-21T04:01:07.647Z"
+  },
+  {
+    "id": "6bcd76bf-ff64-4741-b031-f317d15bd58d",
+    "email": "likigowda@gmail.com",
+    "name": "likita",
+    "passwordHash": "$2a$10$l..MUYTdSQKy/g2ph7tUNeT1UejDBS0vg/iHiOeoJLPPljZjSTKwO",
+    "profile": {
+      "existingConditions": [],
+      "age": 21,
+      "gender": "male",
+      "height": 176,
+      "weight": 79,
+      "activityLevel": 1,
+      "dietPreference": "non-veg",
+      "goal": "maintain",
+      "bmi": 25.5,
+      "bmr": 1790
+    },
+    "createdAt": "2025-11-25T08:29:00.958Z"
   }
 ]

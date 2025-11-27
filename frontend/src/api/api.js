@@ -9,7 +9,7 @@ const api = axios.create({
     },
 });
 
-// Interceptor to attach the JWT token for protected routes
+// Interceptor to attach the JWT token to every protected request
 api.interceptors.request.use((config) => {
     const token = localStorage.getItem('token');
     if (token) {

@@ -1,0 +1,22 @@
+{
+  "male_active_19-50": {
+    "Vitamin D (IU)": 600,
+    "Iron (mg)": 8,
+    "Protein (g)": 75
+  },
+  "female_active_19-50": {
+    "Vitamin D (IU)": 600,
+    "Iron (mg)": 18,
+    "Protein (g)": 60
+  },
+  "male_sedentary_19-50": {
+    "Vitamin D (IU)": 600,
+    "Iron (mg)": 8,
+    "Protein (g)": 65
+  },
+  "default": {
+    "Vitamin D (IU)": 600,
+    "Iron (mg)": 10,
+    "Protein (g)": 60
+  }
+}
