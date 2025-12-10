@@ -7,7 +7,7 @@ const { loadUsers, saveUsers } = require('../utils/mockDB');
 const router = express.Router();
 
 const generateToken = (id) => {
-    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
+    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '1000d' });
 };
 
 // @route POST /api/auth/register

@@ -77,9 +77,9 @@ const App = () => {
   return (
     <Router>
         {/* Top Header/Navigation Bar (Dark Theme) */}
-        <header className="bg-[#161B22] shadow-ai text-white p-4 flex justify-between items-center border-b border-[#00AEEF]">
+        <header className="bg-[#1a0f2e] shadow-ai text-white p-4 flex justify-between items-center border-b border-[#00AEEF]">
             <div className="flex items-center">
-                <h1 className="text-xl font-bold text-ai-green tracking-wider">
+                <h1 className="text-xl font-bold text-ai-WHITE tracking-wider">
                     AI Fitness & Prediction System
                 </h1>
             </div>

@@ -59,4 +59,4 @@ def predict_risk():
 
 if __name__ == '__main__':
     # Running on port 5000
-    app.run(port=5000, debug=False)
+    app.run(port=5000, debug=True)

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import api from '../api/api';
 
-const RiskForm = ({ profile, fetchProfile }) => {
+// RiskForm no longer needs to collect the new features, as they are in the profile object.
+const RiskForm = ({ profile }) => { 
     const [formData, setFormData] = useState({
-        family_history: 0, // 0=No, 1=Yes (integer for ML model)
+        family_history: 0, // 0=No, 1=Yes 
         sleep_time: 7.0,   // float
-        junk_food_freq: 1  // 0=Rarely, 1=Weekly, 2=Daily (integer for ML model)
+        junk_food_freq: 1  // 0=Rarely, 1=Weekly, 2=Daily 
     });
     const [result, setResult] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -26,21 +27,35 @@ const RiskForm = ({ profile, fetchProfile }) => {
         setResult(null);
         setError('');
 
+        // -------------------------------------------------------------
+        // CRITICAL UPDATE: Including the 4 new features from the profile prop
+        // -------------------------------------------------------------
         const payload = {
+            // Core Biometrics
             bmi: profile.bmi, 
             age: profile.age,
             gender: profile.gender === 'male' ? 0 : 1, 
             activity_level: profile.activityLevel,
             
+            // Existing Behavioral Inputs
             family_history: formData.family_history,
             sleep_time: formData.sleep_time,
-            junk_food_freq: formData.junk_food_freq
+            junk_food_freq: formData.junk_food_freq,
+
+            // NEW Risk Factor Inputs from ProfileForm
+            daily_water_intake: profile.daily_water_intake || 2.0, // Default for safety
+            veg_fruit_servings: profile.veg_fruit_servings || 3,
+            processed_meat_freq: profile.processed_meat_freq || 1,
+            sugary_drinks_freq: profile.sugary_drinks_freq || 1,
         };
+        // -------------------------------------------------------------
 
         try {
             const response = await api.post('/risk/predict', payload);
             setResult(response.data.result);
-            // fetchProfile(); 
+            
+            // NOTE: fetchProfile() is commented out to prevent the UI synchronization glitch
+
         } catch (err) {
             console.error('Risk prediction failed:', err.response?.data);
             setError(err.response?.data?.message || 'Prediction service is unavailable (Port 5000 down?)');
@@ -51,6 +66,7 @@ const RiskForm = ({ profile, fetchProfile }) => {
 
     return (
         <form onSubmit={handleSubmit} className="space-y-4 text-sm">
+            {/* ... (Existing form inputs remain the same) ... */}
             <div className="flex justify-between items-center bg-[#1E1E1E] p-3 rounded-lg border border-[#2D333B]">
                 <label htmlFor="family_history" className="font-medium text-gray-300">Family History of Lifestyle Disease:</label>
                 <input 

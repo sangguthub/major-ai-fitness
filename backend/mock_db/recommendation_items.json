@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "High-Protein Lentil Bowl",
+    "type": "diet",
+    "macro_protein_ratio": 0.45,
+    "complexity": 1,
+    "risk_alignment": 1,
+    "details": "Great for muscle maintenance and weight loss."
+  },
+  {
+    "id": 2,
+    "name": "Quick Carb Cycling Breakfast",
+    "type": "diet",
+    "macro_protein_ratio": 0.25,
+    "complexity": 2,
+    "risk_alignment": 2,
+    "details": "High energy meal for intense morning workouts."
+  },
+  {
+    "id": 3,
+    "name": "Basic Bodyweight Routine (No equipment)",
+    "type": "workout",
+    "intensity_score": 0.3,
+    "duration_minutes": 30,
+    "risk_alignment": 1,
+    "details": "Ideal for sedentary users or beginners."
+  },
+  {
+    "id": 4,
+    "name": "HIIT 25-Minute Fat Burn",
+    "type": "workout",
+    "intensity_score": 0.8,
+    "duration_minutes": 25,
+    "risk_alignment": 3,
+    "details": "Advanced routine; requires high fitness level."
+  }
+]

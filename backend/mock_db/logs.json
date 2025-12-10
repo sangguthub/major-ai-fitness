@@ -8433,5 +8433,2926 @@
       "sleep_time": 7,
       "junk_food_freq": 1
     }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T17:01:30.756Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 11,
+      "Medium": 88
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T17:03:27.256Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 11,
+      "Medium": 88
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T17:03:38.578Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 11,
+      "Medium": 88
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T17:04:21.595Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 11,
+      "Medium": 88
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T17:04:33.322Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 69,
+      "Low": 0,
+      "Medium": 31
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T17:04:46.580Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 6,
+      "Low": 3,
+      "Medium": 91
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 9,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T17:04:48.580Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 6,
+      "Low": 3,
+      "Medium": 91
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 9,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T17:04:56.417Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 89,
+      "Low": 0,
+      "Medium": 11
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 9,
+      "junk_food_freq": 2
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T17:05:02.965Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 86,
+      "Low": 0,
+      "Medium": 14
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 12,
+      "junk_food_freq": 2
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T17:05:13.132Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 87,
+      "Low": 0,
+      "Medium": 13
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 5,
+      "junk_food_freq": 2
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:15:30.163Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 90,
+      "Medium": 10
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:15:39.097Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 5,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:15:40.566Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 5,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:15:41.842Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 5,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:15:43.101Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 5,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:15:44.454Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 5,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:15:45.623Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 5,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:15:45.748Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 5,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:15:47.373Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 5,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:15:48.516Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 5,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:15:48.742Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 5,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:15:57.512Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 6,
+      "Low": 3,
+      "Medium": 91
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 11.5,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:15:59.710Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 6,
+      "Low": 3,
+      "Medium": 91
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 11.5,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:00.905Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 6,
+      "Low": 3,
+      "Medium": 91
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 11.5,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:10.783Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 3,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 4.5,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:12.514Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 3,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 4.5,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:13.820Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 3,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 4.5,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:18.855Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 5,
+      "Medium": 93
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:19.970Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 5,
+      "Medium": 93
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:21.224Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 5,
+      "Medium": 93
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:21.419Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 5,
+      "Medium": 93
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:22.698Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 5,
+      "Medium": 93
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:31.987Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 88,
+      "Medium": 12
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:33.962Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 88,
+      "Medium": 12
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:35.105Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 88,
+      "Medium": 12
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:36.282Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 88,
+      "Medium": 12
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:36.410Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 88,
+      "Medium": 12
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:41.724Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 88,
+      "Medium": 12
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:42.833Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 88,
+      "Medium": 12
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:43.131Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 88,
+      "Medium": 12
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:44.145Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 88,
+      "Medium": 12
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:45.315Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 88,
+      "Medium": 12
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:16:45.509Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 88,
+      "Medium": 12
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:17:46.407Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 88,
+      "Medium": 12
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:17:55.081Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 7,
+      "Medium": 93
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 2
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:18:07.586Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 99,
+      "Medium": 1
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:18:10.880Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 99,
+      "Medium": 1
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:18:16.995Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 98,
+      "Medium": 2
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 8.5,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:18:23.534Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 97,
+      "Medium": 3
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 9,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:18:30.126Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 96,
+      "Medium": 4
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7.5,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:18:33.672Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 96,
+      "Medium": 4
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7.5,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:18:34.768Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 96,
+      "Medium": 4
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7.5,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:18:44.334Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 97,
+      "Medium": 3
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:18:49.632Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 98,
+      "Medium": 2
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 6.5,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:18:54.959Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 98,
+      "Medium": 2
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 6,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:18:56.292Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 98,
+      "Medium": 2
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 6,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:18:57.545Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 98,
+      "Medium": 2
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 6,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:18:58.695Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 98,
+      "Medium": 2
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 6,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:19:09.910Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 97,
+      "Medium": 3
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 5.5,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:19:13.626Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 97,
+      "Medium": 3
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 5.5,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:19:13.772Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 97,
+      "Medium": 3
+    },
+    "inputParams": {
+      "bmi": 30.78,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 5.5,
+      "junk_food_freq": 0
+    }
+  },
+  {
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:38:15.616Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1764268700094",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-11-27T18:38:20.094Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 254,
+    "macroBreakdown": {
+      "Carbohydrates": 51,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1764268701253",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-11-27T18:38:21.253Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 314,
+    "macroBreakdown": {
+      "Carbohydrates": 63,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1764268702355",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-11-27T18:38:22.355Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 273,
+    "macroBreakdown": {
+      "Carbohydrates": 55,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1764268703482",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-11-27T18:38:23.482Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 282,
+    "macroBreakdown": {
+      "Carbohydrates": 56,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1764268704544",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-11-27T18:38:24.544Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 342,
+    "macroBreakdown": {
+      "Carbohydrates": 68,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1764268707372",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-11-27T18:38:27.372Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 347,
+    "macroBreakdown": {
+      "Carbohydrates": 69,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1764268708577",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-11-27T18:38:28.577Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 263,
+    "macroBreakdown": {
+      "Carbohydrates": 53,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1764268710215",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-11-27T18:38:30.215Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 259,
+    "macroBreakdown": {
+      "Carbohydrates": 52,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1764268711352",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-11-27T18:38:31.352Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 303,
+    "macroBreakdown": {
+      "Carbohydrates": 61,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1764268712522",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-11-27T18:38:32.522Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 286,
+    "macroBreakdown": {
+      "Carbohydrates": 57,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1764268737191",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-11-27T18:38:57.191Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 297,
+    "macroBreakdown": {
+      "Carbohydrates": 59,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1764268960757",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-11-27T18:42:40.757Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 341,
+    "macroBreakdown": {
+      "Carbohydrates": 68,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "risk_assessment",
+    "date": "2025-11-27T18:50:49.468Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 1,
+      "Low": 81,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 21,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1764269513543",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-11-27T18:51:53.543Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 352,
+    "macroBreakdown": {
+      "Carbohydrates": 70,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-09T04:33:29.979Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 15,
+      "Medium": 85
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 6,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-09T04:33:49.731Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 18,
+      "Low": 5,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 6,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765254839956",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-09T04:33:59.956Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 317,
+    "macroBreakdown": {
+      "Carbohydrates": 63,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "risk_assessment",
+    "date": "2025-12-09T04:43:31.933Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 86,
+      "Medium": 14
+    },
+    "inputParams": {
+      "bmi": 23.87,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "risk_assessment",
+    "date": "2025-12-09T14:26:36.521Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 86,
+      "Medium": 14
+    },
+    "inputParams": {
+      "bmi": 23.87,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765290400835",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:26:40.835Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 315,
+    "macroBreakdown": {
+      "Carbohydrates": 63,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "risk_assessment",
+    "date": "2025-12-09T14:27:00.716Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 86,
+      "Medium": 14
+    },
+    "inputParams": {
+      "bmi": 23.87,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765290424330",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:04.330Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 288,
+    "macroBreakdown": {
+      "Carbohydrates": 58,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290425000",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:05.000Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 298,
+    "macroBreakdown": {
+      "Carbohydrates": 60,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290425861",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:05.861Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 338,
+    "macroBreakdown": {
+      "Carbohydrates": 68,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290426482",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:06.482Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 352,
+    "macroBreakdown": {
+      "Carbohydrates": 70,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290426658",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:06.658Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 332,
+    "macroBreakdown": {
+      "Carbohydrates": 66,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290427240",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:07.240Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 302,
+    "macroBreakdown": {
+      "Carbohydrates": 60,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290427922",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:07.922Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 328,
+    "macroBreakdown": {
+      "Carbohydrates": 66,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290427993",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:07.993Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 332,
+    "macroBreakdown": {
+      "Carbohydrates": 66,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290428869",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:08.869Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 315,
+    "macroBreakdown": {
+      "Carbohydrates": 63,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290429550",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:09.550Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 273,
+    "macroBreakdown": {
+      "Carbohydrates": 55,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290430196",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:10.196Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 315,
+    "macroBreakdown": {
+      "Carbohydrates": 63,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290430801",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:10.801Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 285,
+    "macroBreakdown": {
+      "Carbohydrates": 57,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290431558",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:11.558Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 357,
+    "macroBreakdown": {
+      "Carbohydrates": 71,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290432214",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:12.214Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 270,
+    "macroBreakdown": {
+      "Carbohydrates": 54,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290432821",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:12.821Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 343,
+    "macroBreakdown": {
+      "Carbohydrates": 69,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290433429",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:13.429Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 270,
+    "macroBreakdown": {
+      "Carbohydrates": 54,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290434217",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:14.217Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 354,
+    "macroBreakdown": {
+      "Carbohydrates": 71,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290434330",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:14.330Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 247,
+    "macroBreakdown": {
+      "Carbohydrates": 49,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290434991",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:14.991Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 278,
+    "macroBreakdown": {
+      "Carbohydrates": 56,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290435813",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:15.813Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 253,
+    "macroBreakdown": {
+      "Carbohydrates": 51,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290436416",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:16.416Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 331,
+    "macroBreakdown": {
+      "Carbohydrates": 66,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290436580",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:16.580Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 340,
+    "macroBreakdown": {
+      "Carbohydrates": 68,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290437224",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:17.224Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 298,
+    "macroBreakdown": {
+      "Carbohydrates": 60,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290438022",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:18.022Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 251,
+    "macroBreakdown": {
+      "Carbohydrates": 50,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290438183",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:18.183Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 353,
+    "macroBreakdown": {
+      "Carbohydrates": 71,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290438765",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:18.765Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 344,
+    "macroBreakdown": {
+      "Carbohydrates": 69,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290439602",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:19.602Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 264,
+    "macroBreakdown": {
+      "Carbohydrates": 53,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290439729",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:19.729Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 291,
+    "macroBreakdown": {
+      "Carbohydrates": 58,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290440335",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:20.335Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 304,
+    "macroBreakdown": {
+      "Carbohydrates": 61,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290441092",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:21.092Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 286,
+    "macroBreakdown": {
+      "Carbohydrates": 57,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290441279",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:21.279Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 300,
+    "macroBreakdown": {
+      "Carbohydrates": 60,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290441895",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:21.895Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 290,
+    "macroBreakdown": {
+      "Carbohydrates": 58,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290442615",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:22.615Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 282,
+    "macroBreakdown": {
+      "Carbohydrates": 56,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290443252",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:23.252Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 258,
+    "macroBreakdown": {
+      "Carbohydrates": 52,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290443368",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:23.368Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 357,
+    "macroBreakdown": {
+      "Carbohydrates": 71,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290444146",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:24.146Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 291,
+    "macroBreakdown": {
+      "Carbohydrates": 58,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290474788",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:54.788Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 329,
+    "macroBreakdown": {
+      "Carbohydrates": 66,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290474999",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:54.999Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 332,
+    "macroBreakdown": {
+      "Carbohydrates": 66,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290475704",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:55.704Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 276,
+    "macroBreakdown": {
+      "Carbohydrates": 55,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290475845",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:55.845Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 253,
+    "macroBreakdown": {
+      "Carbohydrates": 51,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765290476620",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:27:56.620Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 245,
+    "macroBreakdown": {
+      "Carbohydrates": 49,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "risk_assessment",
+    "date": "2025-12-09T14:50:57.765Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 86,
+      "Medium": 14
+    },
+    "inputParams": {
+      "bmi": 23.87,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765291871256",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:51:11.256Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 329,
+    "macroBreakdown": {
+      "Carbohydrates": 66,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291910027",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:51:50.027Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 304,
+    "macroBreakdown": {
+      "Carbohydrates": 61,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291921232",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:52:01.232Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 271,
+    "macroBreakdown": {
+      "Carbohydrates": 54,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291922240",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:52:02.240Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 304,
+    "macroBreakdown": {
+      "Carbohydrates": 61,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-09T14:52:46.821Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-09T14:52:57.384Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765291980223",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:00.223Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 345,
+    "macroBreakdown": {
+      "Carbohydrates": 69,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291991989",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:11.989Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 284,
+    "macroBreakdown": {
+      "Carbohydrates": 57,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291992057",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:12.057Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 344,
+    "macroBreakdown": {
+      "Carbohydrates": 69,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291992187",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:12.187Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 337,
+    "macroBreakdown": {
+      "Carbohydrates": 67,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291992905",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:12.905Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 314,
+    "macroBreakdown": {
+      "Carbohydrates": 63,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291993770",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:13.770Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 303,
+    "macroBreakdown": {
+      "Carbohydrates": 61,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291993845",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:13.845Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 357,
+    "macroBreakdown": {
+      "Carbohydrates": 71,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291993969",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:13.969Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 285,
+    "macroBreakdown": {
+      "Carbohydrates": 57,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291994758",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:14.758Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 324,
+    "macroBreakdown": {
+      "Carbohydrates": 65,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291995575",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:15.575Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 267,
+    "macroBreakdown": {
+      "Carbohydrates": 53,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291995712",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:15.712Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 301,
+    "macroBreakdown": {
+      "Carbohydrates": 60,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291996430",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:16.430Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 240,
+    "macroBreakdown": {
+      "Carbohydrates": 48,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291996560",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:16.560Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 358,
+    "macroBreakdown": {
+      "Carbohydrates": 72,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765291997168",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:53:17.168Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 315,
+    "macroBreakdown": {
+      "Carbohydrates": 63,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-09T14:58:43.457Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765292326783",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:58:46.783Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 326,
+    "macroBreakdown": {
+      "Carbohydrates": 65,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-09T14:59:51.691Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765292394173",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-09T14:59:54.173Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 264,
+    "macroBreakdown": {
+      "Carbohydrates": 53,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-09T15:00:18.244Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 13,
+      "Medium": 87
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765292423909",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-09T15:00:23.909Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 308,
+    "macroBreakdown": {
+      "Carbohydrates": 62,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765292443300",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-09T15:00:43.300Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 270,
+    "macroBreakdown": {
+      "Carbohydrates": 54,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765292443381",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-09T15:00:43.381Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 296,
+    "macroBreakdown": {
+      "Carbohydrates": 59,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765292444091",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-09T15:00:44.091Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 294,
+    "macroBreakdown": {
+      "Carbohydrates": 59,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765292444155",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-09T15:00:44.155Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 348,
+    "macroBreakdown": {
+      "Carbohydrates": 70,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765292444737",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-09T15:00:44.737Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 264,
+    "macroBreakdown": {
+      "Carbohydrates": 53,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765292478827",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-09T15:01:18.827Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 307,
+    "macroBreakdown": {
+      "Carbohydrates": 61,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765292479577",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-09T15:01:19.577Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 294,
+    "macroBreakdown": {
+      "Carbohydrates": 59,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765292479726",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-09T15:01:19.726Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 316,
+    "macroBreakdown": {
+      "Carbohydrates": 63,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-10T07:15:34.346Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 16,
+      "Low": 6,
+      "Medium": 78
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-10T07:32:13.496Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 13,
+      "Medium": 87
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765353681074",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-10T08:01:21.075Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 260,
+    "macroBreakdown": {
+      "Carbohydrates": 52,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765354016620",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-10T08:06:56.620Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 291,
+    "macroBreakdown": {
+      "Carbohydrates": 58,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpgdata:image/jpeg;base64,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"
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-10T14:36:12.012Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 13,
+      "Medium": 87
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-10T14:36:17.975Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 16,
+      "Low": 6,
+      "Medium": 78
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-10T14:36:25.021Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 53,
+      "Low": 1,
+      "Medium": 46
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-10T14:36:32.188Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 56,
+      "Low": 3,
+      "Medium": 41
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 5,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
   }
 ]

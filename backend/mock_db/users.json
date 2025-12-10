@@ -39,15 +39,15 @@
     "passwordHash": "$2a$10$WkqTXWFKWYPwJxHaauF3.ObTa6JalAsDTnlfjq4FugRD4eJyjtG8S",
     "profile": {
       "existingConditions": [],
-      "age": 21,
-      "gender": "male",
-      "height": 173,
-      "weight": 30,
-      "activityLevel": 1,
-      "dietPreference": "non-veg",
-      "bmi": 10.02,
-      "bmr": 1281,
-      "goal": "lose"
+      "age": 28,
+      "gender": "female",
+      "height": 171,
+      "weight": 72,
+      "activityLevel": 2,
+      "dietPreference": "vegan",
+      "bmi": 24.62,
+      "bmr": 1488,
+      "goal": "maintain"
     },
     "createdAt": "2025-11-19T09:54:57.408Z"
   },
@@ -79,5 +79,66 @@
       "bmr": 1790
     },
     "createdAt": "2025-11-25T08:29:00.958Z"
+  },
+  {
+    "id": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "email": "admin@civic.com",
+    "name": "sangappa y k",
+    "passwordHash": "$2a$10$/Pr.nJhdKZKKaY4nvNS86OlgMb5Iv6F5kEgNqeKAij0CDeNFfZJ4i",
+    "profile": {
+      "existingConditions": [],
+      "age": 21,
+      "gender": "male",
+      "height": 171,
+      "weight": 73,
+      "activityLevel": 1,
+      "dietPreference": "non-veg",
+      "goal": "maintain",
+      "bmi": 24.96,
+      "bmr": 1699
+    },
+    "createdAt": "2025-11-27T18:36:40.333Z"
+  },
+  {
+    "id": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "email": "liki6@gmail.com",
+    "name": "likita",
+    "passwordHash": "$2a$10$e8SGuz6aEPXwGVqEURyA/.EoWf.LWtqJQdL6ZOkCf0ZAYKUlJWo2O",
+    "profile": {
+      "existingConditions": [],
+      "age": 22,
+      "gender": "female",
+      "height": 147,
+      "weight": 46,
+      "activityLevel": 0,
+      "dietPreference": "non-veg",
+      "goal": "maintain",
+      "bmi": 21.29,
+      "bmr": 1108,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    },
+    "createdAt": "2025-12-09T04:31:25.095Z"
+  },
+  {
+    "id": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "email": "riya@gmail.com",
+    "name": "Riya",
+    "passwordHash": "$2a$10$YBBPmxgtDttaqb4gSBEdF.1Uok1Kd5oVNU9gSYPvsw.ipsdC47hzm",
+    "profile": {
+      "existingConditions": [],
+      "age": 22,
+      "gender": "female",
+      "height": 149,
+      "weight": 53,
+      "activityLevel": 1,
+      "dietPreference": "non-veg",
+      "goal": "lose",
+      "bmi": 23.87,
+      "bmr": 1190
+    },
+    "createdAt": "2025-12-09T04:40:09.778Z"
   }
 ]
