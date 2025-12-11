@@ -6,24 +6,25 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 // Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-// Define chart colors for the dark theme (matching index.css)
+// Define chart colors for the dark theme
 const ACCENT_COLOR = '#00AEEF'; // AI Blue
 const AI_GREEN = '#00FFC0';
-const PRIMARY_TEXT = '#C9D1D9';
+const PRIMARY_TEXT = '#C9D1D1'; // Correctly defined as PRIMARY_TEXT
 const DARK_GRID = 'rgba(45, 51, 59, 0.5)';
+const RISK_COLOR = '#FFB400'; // Orange/Gold for Risk
 
 const ProgressChart = ({ dailyCalorieTarget }) => {
-    const [chartData, setChartData] = useState(null);
+    const [progressData, setProgressData] = useState(null);
+    const [riskData, setRiskData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
-    // Map risk score value to text for the y2 axis labels
+    // Map risk score value to text for the y-axis labels
     const riskTextMap = { 1: 'Low', 2: 'Medium', 3: 'High' };
 
     useEffect(() => {
         const fetchData = async () => {
-            // Check if essential target data is available before fetching logs
-            if (dailyCalorieTarget) {
+            if (!Number.isFinite(dailyCalorieTarget) || dailyCalorieTarget <= 0) {
                  setError("Calorie Target not set. Please update your Profile & Goal.");
                  setLoading(false);
                  return;
@@ -35,129 +36,124 @@ const ProgressChart = ({ dailyCalorieTarget }) => {
                 // 1. Prepare Labels (Dates)
                 const dates = [...new Set([
                     ...data.weightHistory.map(d => d.date),
-                    ...data.calorieHistory.map(d => d.date)
+                    ...data.calorieHistory.map(d => d.date),
+                    ...data.riskHistory.map(d => d.date)
                 ])].sort();
 
-                // 2. Map data to dates (fill missing dates with null for Chart.js)
+                // 2. Map data to dates
                 const weightMap = new Map(data.weightHistory.map(item => [item.date, item.weight]));
                 const calorieMap = new Map(data.calorieHistory.map(item => [item.date, item.calories]));
-                const riskMap = new Map(data.riskHistory.map(item => [item.date, item.score])); 
+                const riskMap = new Map(data.riskHistory.map(item => [item.date, item.score]));
                 
-                setChartData({
+                // --- CHART 1: PROGRESS TRACKER DATA ---
+                setProgressData({
                     labels: dates,
                     datasets: [
-                        // Primary Line: Weight History (Electric Blue)
                         {
                             label: 'Weight (kg)',
                             data: dates.map(date => weightMap.get(date) || null),
                             borderColor: ACCENT_COLOR, 
-                            yAxisID: 'y',
+                            yAxisID: 'y-weight',
                             tension: 0.2,
                             pointBackgroundColor: ACCENT_COLOR,
                             spanGaps: true, 
                         },
-                        // Secondary Line: Calorie Intake (High Contrast Red)
                         {
                             label: 'Calorie Intake (kcal)',
                             data: dates.map(date => calorieMap.get(date) || null),
-                            borderColor: '#FF4C4C', 
+                            borderColor: '#FF4C4C', // Red
                             backgroundColor: 'rgba(255, 76, 76, 0.2)',
-                            yAxisID: 'y1',
+                            yAxisID: 'y-calorie',
                             spanGaps: true,
                         },
-                        // Target Line (Horizontal - Neon Green/Cyan)
                         {
                             label: 'Calorie Target',
-                            data: dates.map(() => data.target),
+                            data: dates.map(() => dailyCalorieTarget),
                             borderColor: AI_GREEN, 
                             borderDash: [8, 8], 
                             pointRadius: 0,
-                            yAxisID: 'y1',
+                            yAxisID: 'y-calorie',
                             tension: 0,
                         },
-                        // Overlay Dataset: Health Risk Score (Scatter Plot)
+                    ],
+                });
+                
+                // --- CHART 2: RISK CORRELATION DATA ---
+                setRiskData({
+                    labels: dates,
+                    datasets: [
                         {
-                            label: 'Risk Score Overlay (1=Low, 3=High)',
+                            label: 'Health Risk Score (1=Low, 3=High)',
                             data: dates.map(date => riskMap.get(date) || null),
-                            borderColor: 'transparent',
-                            backgroundColor: 'rgba(255, 180, 0, 0.8)', // Orange/Gold
-                            yAxisID: 'y2', 
-                            showLine: false, // Show only points
+                            borderColor: RISK_COLOR,
+                            backgroundColor: 'transparent', 
+                            yAxisID: 'y-risk',
+                            showLine: true, // Connect the risk points now
                             pointStyle: dates.map(date => riskMap.get(date) === 3 ? 'triangle' : riskMap.get(date) === 2 ? 'rect' : 'circle'),
-                            pointRadius: 8
+                            pointRadius: 6,
+                            tension: 0.4
                         }
                     ],
                 });
+
                 setLoading(false);
 
             } catch (err) {
                 console.error("Analytics fetch failed:", err);
-                if (err.response && err.response.status === 401) {
-                    setError("Unauthorized. Please log in again.");
-                } else {
-                    setError("Failed to load historical data. Check backend logs.");
-                }
+                setError("Failed to load historical data. Check backend logs.");
                 setLoading(false);
             }
         };
 
         fetchData();
-    }, [dailyCalorieTarget]); 
+    }, [dailyCalorieTarget]);
 
-    // Chart Options (Configuring multiple Y-axes for Dark Theme)
-    const options = {
+    // ------------------------------------------------------------------
+    // Chart 1: PROGRESS TRACKER OPTIONS (Weight, Calorie Intake, Target)
+    // ------------------------------------------------------------------
+    const progressOptions = {
         responsive: true,
         maintainAspectRatio: false,
         interaction: { mode: 'index', intersect: false },
-        stacked: false,
         plugins: {
-            legend: { 
-                position: 'top',
-                labels: {
-                    color: PRIMARY_TEXT, 
-                }
-            },
-            title: { 
-                display: true, 
-                text: 'Progress Tracker & Risk Correlation',
-                color: AI_GREEN, 
-                font: { size: 18 }
-            },
-            tooltip: {
-                backgroundColor: 'rgba(22, 27, 34, 0.85)', 
-                titleColor: '#FFFFFF',
-                bodyColor: PRIMARY_TEXT,
-                borderColor: ACCENT_COLOR,
-                borderWidth: 1
-            }
+            legend: { labels: { color: PRIMARY_TEXT } },
+            title: { display: true, text: 'Progress Tracker: Weight & Calorie Consistency', color: ACCENT_COLOR, font: { size: 18 } },
+            tooltip: { backgroundColor: 'rgba(22, 27, 34, 0.85)', titleColor: '#FFFFFF', bodyColor: PRIMARY_TEXT, borderColor: ACCENT_COLOR, borderWidth: 1 }
         },
         scales: {
-            x: { // X-axis (Dates)
-                ticks: { color: PRIMARY_TEXT },
-                grid: { color: DARK_GRID } 
-            },
-            y: { // Y-axis for Weight (AUTO-SCALING: FIXED)
-                type: 'linear',
-                display: true,
-                position: 'left',
-                title: { display: true, text: 'Weight (kg)', color: PRIMARY_TEXT },
+            x: { ticks: { color: PRIMARY_TEXT }, grid: { color: DARK_GRID } },
+            'y-weight': { // Y-axis for Weight
+                type: 'linear', display: true, position: 'left',
+                // FIX APPLIED HERE: Changed PRIMARY_COLOR to PRIMARY_TEXT
+                title: { display: true, text: 'Weight (kg)', color: PRIMARY_TEXT }, 
                 ticks: { color: PRIMARY_TEXT },
                 grid: { color: DARK_GRID },
-                // min/max removed for auto-scaling based on data
             },
-            y1: { // Y1-axis for Calorie Intake/Target (AUTO-SCALING: FIXED)
-                type: 'linear',
-                display: true,
-                position: 'right',
+            'y-calorie': { // Y1-axis for Calorie Intake/Target
+                type: 'linear', display: true, position: 'right',
                 title: { display: true, text: 'Calorie Intake (kcal)', color: PRIMARY_TEXT },
                 ticks: { color: PRIMARY_TEXT },
-                // min/max removed for auto-scaling based on data
                 grid: { drawOnChartArea: false },
             },
-            y2: { // Y2-axis for Risk Score Overlay (FIXED SCALE)
-                type: 'linear',
-                display: true,
-                position: 'left',
+        }
+    };
+    
+    // ------------------------------------------------------------------
+    // Chart 2: RISK CORRELATION OPTIONS (Risk Score)
+    // ------------------------------------------------------------------
+    const riskOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+            legend: { labels: { color: PRIMARY_TEXT } },
+            title: { display: true, text: 'Health Risk Trend Over Time', color: RISK_COLOR, font: { size: 18 } },
+            tooltip: { backgroundColor: 'rgba(22, 27, 34, 0.85)', titleColor: '#FFFFFF', bodyColor: PRIMARY_TEXT, borderColor: RISK_COLOR, borderWidth: 1 }
+        },
+        scales: {
+            x: { ticks: { color: PRIMARY_TEXT }, grid: { color: DARK_GRID } },
+            'y-risk': { // Y-axis for Risk Score
+                type: 'linear', display: true, position: 'left',
                 title: { display: true, text: 'Risk Score', color: PRIMARY_TEXT },
                 ticks: {
                     color: PRIMARY_TEXT,
@@ -166,23 +162,43 @@ const ProgressChart = ({ dailyCalorieTarget }) => {
                         return riskTextMap[value] || ''; 
                     }
                 },
-                grid: { drawOnChartArea: false },
+                grid: { color: DARK_GRID },
                 min: 0.5, max: 3.5, // Fixed scale for discrete categories (1, 2, 3)
-            }
+            },
         }
     };
 
 
-    if (loading) return <div className="text-center py-10 text-gray-500">Loading charts...</div>;
+    if (loading) return <div className="text-center py-10 text-gray-500">Loading historical data...</div>;
     if (error) return <div className="text-center py-10 text-red-500">{error}</div>;
 
+    const hasData = progressData && progressData.labels.length > 0;
+    const hasRiskData = riskData && riskData.datasets[0].data.some(d => d !== null);
+
+    if (!hasData) {
+        return (
+            <div className="text-center py-10 text-gray-500 border border-dashed border-gray-700 p-8 mt-10 rounded-lg">
+                No Historical Data. Log a meal or complete a risk check to start tracking progress!
+            </div>
+        );
+    }
+    
     return (
-        <div style={{ height: '500px' }}> {/* Container for fixed chart height */}
-            {chartData && chartData.labels.length > 0 ? (
-                <Line options={options} data={chartData} />
+        <div className="space-y-12">
+            
+            {/* --- CHART 1: PROGRESS TRACKER (Weight & Calories) --- */}
+            <div style={{ height: '500px' }} className="bg-[#161B22] p-4 rounded-xl shadow-lg border border-[#2D333B]"> 
+                <Line options={progressOptions} data={progressData} />
+            </div>
+
+            {/* --- CHART 2: HEALTH RISK TREND --- */}
+            {hasRiskData ? (
+                <div style={{ height: '350px' }} className="bg-[#161B22] p-4 rounded-xl shadow-lg border border-[#2D333B]">
+                    <Line options={riskOptions} data={riskData} />
+                </div>
             ) : (
-                <div className="text-center py-10 text-gray-500 border border-dashed border-gray-700 p-8 mt-10 rounded-lg">
-                    No Historical Data. Log a meal or complete a risk check to start tracking progress!
+                <div className="text-center py-10 text-gray-500 border border-dashed border-gray-700 p-8 rounded-lg bg-[#161B22]">
+                    No historical risk assessment data to display. Complete a Health Risk Check to begin tracking this trend.
                 </div>
             )}
         </div>

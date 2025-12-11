@@ -1,122 +1,140 @@
-import React, { useState, useEffect, useCallback } from 'react'; // ADDED useCallback
+import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Header from './components/Header';
+import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
-import Recommendations from './pages/Recommendations'; 
-import LandingPage from './pages/LandingPage'; 
-import AboutPage from './pages/AboutPage'; 
-import api from './api/api'; 
+import AboutPage from './pages/AboutPage';
+import api from './api/api';
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [profile, setProfile] = useState({});
-  const [appLoading, setAppLoading] = useState(true);
+    // Global State for Authentication, User Details, and Profile Data
+    const [user, setUser] = useState(null);
+    const [profile, setProfile] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
 
-  // 1. Stabilized handleLogout
-  const handleLogout = useCallback(() => {
-    localStorage.removeItem('token');
-    setIsLoggedIn(false);
-    setProfile({});
-    // Dependencies: State setters
-  }, [setProfile]); 
+    // --- 2. Authentication Handlers ---
+    
+    // Function to perform a clean logout, clearing all state and storage
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        setUser(null);
+        setProfile({});
+    };
+    
+    // Dependency list for useCallback
+    const handleLogoutCallback = useCallback(handleLogout, []);
 
-  const handleAuth = (token, profileData) => {
-    localStorage.setItem('token', token);
-    setIsLoggedIn(true);
-    setProfile(profileData || {});
-  };
-  
-  // 2. Stabilized function for fetching profile data
-  const fetchProfileData = useCallback(async () => {
-    if (!localStorage.getItem('token')) {
-        setAppLoading(false);
-        return;
-    }
-    try {
-        const response = await api.get('/profile');
-        setProfile(response.data.profile);
-    } catch (err) {
-        // If profile fetch fails (e.g., token expired/invalid), log out the user
-        handleLogout(); 
-    } finally {
-        setAppLoading(false);
-    }
-    // Dependencies: handleLogout and state setters
-  }, [handleLogout, setProfile, setAppLoading]); 
+    // Function to handle successful login and store data
+    const handleLogin = (userData) => {
+        // userData contains { token, id, name, email, profile }
+        localStorage.setItem('token', userData.token);
+        
+        const { profile: userProfile, ...userDetails } = userData;
 
-  // --- Initial Data Load and Login Check ---
-  
-  // 3. Final useEffect logic remains the same, now relying on stable dependencies
-  useEffect(() => {
-    if (localStorage.getItem('token')) {
-      setIsLoggedIn(true);
-      fetchProfileData(); 
-    } else {
-      setAppLoading(false);
-    }
-    // Dependencies: Checks login status and relies on the stable fetchProfileData
-  }, [isLoggedIn, fetchProfileData]); 
+        setUser(userDetails);
+        setProfile(userProfile || {});
+    };
 
-  // --- Routing and Layout ---
+    // --- 1. Fetch User Profile Data (Includes the JWT malformed FIX) ---
+    const fetchProfile = useCallback(async () => {
+        const token = localStorage.getItem('token');
+        
+        // 1. If token is missing, stop loading and return.
+        if (!token) {
+            setIsLoading(false);
+            return;
+        }
 
-  const ProtectedRoute = ({ children }) => {
-    if (!isLoggedIn) {
-      return <Navigate to="/" replace />;
-    }
-    return children;
-  };
-  
-  if (appLoading) {
-      return (
-        <div className="min-h-screen bg-[#0D1117] text-ai-green text-center text-2xl font-bold pt-40">
-            Loading System Data...
-            <div className="mt-8 text-xl text-gray-500">Initializing AI modules...</div>
-        </div>
-      );
-  }
+        // 2. AGGRESSIVE CHECK: Check if the token is an obvious leftover malformed string 
+        // (e.g., "null", "undefined", or too short to be valid JWT)
+        if (token === 'null' || token === 'undefined' || token.length < 10) {
+            console.warn("Detected malformed or placeholder token in storage. Clearing...");
+            handleLogoutCallback(); // Clear the malformed token immediately
+            setIsLoading(false);
+            return;
+        }
 
-  return (
-    <Router>
-        {/* Top Header/Navigation Bar (Dark Theme) */}
-        <header className="bg-[#1a0f2e] shadow-ai text-white p-4 flex justify-between items-center border-b border-[#00AEEF]">
-            <div className="flex items-center">
-                <h1 className="text-xl font-bold text-ai-WHITE tracking-wider">
-                    AI Fitness & Prediction System
-                </h1>
+        try {
+            // Note: The /api/profile endpoint returns the full user object including profile{}
+            const response = await api.get('/profile'); 
+            
+            // The response.data contains { id, name, email, profile, token }
+            const { profile: fetchedProfile, ...userDetails } = response.data;
+            
+            setUser(userDetails);
+            setProfile(fetchedProfile || {});
+
+        } catch (error) {
+            console.error('Error fetching user profile (Server check):', error);
+            
+            // 3. SERVER RESPONSE CHECK: If the server specifically returns Unauthorized (401), 
+            // the token is guaranteed to be expired or invalid. We MUST clear it.
+            if (error.response && error.response.status === 401) {
+                console.error("401 Unauthorized received. Invalid token detected. Forcing logout.");
+                handleLogoutCallback(); 
+            }
+            
+        } finally {
+            setIsLoading(false);
+        }
+    }, [handleLogoutCallback]);
+
+    // --- 3. Initial Load Effect ---
+    useEffect(() => {
+        fetchProfile();
+    }, [fetchProfile]);
+
+
+    // --- 4. Loading State Rendering ---
+    if (isLoading) {
+        return (
+            <div className="flex items-center justify-center min-h-screen bg-[#0D1117] text-ai-green">
+                <p className="text-xl">Loading application data...</p>
             </div>
-            <nav className="flex space-x-6 text-sm">
-                {isLoggedIn && <a href="/dashboard" className="text-gray-300 hover:text-ai-green transition">Dashboard</a>}
-                <a href="/about" className="text-gray-300 hover:text-ai-green transition">About</a>
-                {isLoggedIn ? (
-                    <button onClick={handleLogout} className="text-red-400 hover:text-red-300 transition font-medium">Logout</button>
-                ) : (
-                    <a href="/" className="text-white hover:text-ai-green transition font-medium">Login</a>
-                )}
-            </nav>
-        </header>
+        );
+    }
 
-        <Routes>
-          {/* Default Route: Landing Page or Dashboard Redirect */}
-          <Route path="/" element={isLoggedIn ? <Navigate to="/dashboard" /> : <LandingPage onAuthSuccess={handleAuth} />} />
-          
-          {/* Main Application Interface */}
-          <Route path="/dashboard" element={
-            <ProtectedRoute>
-              {/* Dashboard implements the 20/80 sidebar layout */}
-              <Dashboard 
-                profile={profile} 
-                setProfile={setProfile} 
-                fetchProfile={fetchProfileData} // Passed down as the refresh trigger
-              /> 
-            </ProtectedRoute>
-          } />
-          
-          {/* Dedicated About Page */}
-          <Route path="/about" element={<AboutPage />} />
-          
-          <Route path="*" element={<Navigate to="/dashboard" />} />
-        </Routes>
-    </Router>
-  );
+    // --- 5. Main Application Structure and Routing ---
+    return (
+        <Router>
+            <div className="App min-h-screen bg-[#0D1117]">
+                <Header user={user} onLogout={handleLogoutCallback} />
+                <Routes>
+                    {/* Landing Page Route (Acts as Auth Gate) */}
+                    <Route 
+                        path="/" 
+                        element={user ? <Navigate to="/dashboard" /> : <LandingPage onAuthSuccess={handleLogin} />} 
+                    />
+                    
+                    {/* Authentication Routes (Redirects to Dashboard if logged in) */}
+                    <Route 
+                        path="/auth/:type" 
+                        element={user ? <Navigate to="/dashboard" /> : <LandingPage onAuthSuccess={handleLogin} />} 
+                    />
+
+                    {/* Dashboard/Protected Route */}
+                    <Route 
+                        path="/dashboard" 
+                        element={
+                            user ? (
+                                <Dashboard 
+                                    profile={profile} 
+                                    setProfile={setProfile} 
+                                    fetchProfile={fetchProfile} 
+                                    user={user} // Pass user for Dashboard Summary
+                                />
+                            ) : (
+                                <Navigate to="/" replace />
+                            )
+                        } 
+                    />
+
+                    {/* About Page Route */}
+                    <Route path="/about" element={<AboutPage />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 };
 
 export default App;

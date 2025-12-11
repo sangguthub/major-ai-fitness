@@ -40,14 +40,22 @@
     "profile": {
       "existingConditions": [],
       "age": 28,
-      "gender": "female",
+      "gender": "male",
       "height": 171,
       "weight": 72,
       "activityLevel": 2,
-      "dietPreference": "vegan",
+      "dietPreference": "non-veg",
       "bmi": 24.62,
-      "bmr": 1488,
-      "goal": "maintain"
+      "bmr": 1654,
+      "goal": "maintain",
+      "login_streak": 2,
+      "last_login": "2025-12-10T18:30:00.000Z",
+      "tdee": 3143,
+      "dailyCalorieTarget": 3143,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
     },
     "createdAt": "2025-11-19T09:54:57.408Z"
   },
@@ -137,8 +145,22 @@
       "dietPreference": "non-veg",
       "goal": "lose",
       "bmi": 23.87,
-      "bmr": 1190
+      "bmr": 1190,
+      "login_streak": 1,
+      "last_login": "2025-12-09T18:30:00.000Z",
+      "tdee": 1845,
+      "dailyCalorieTarget": 1345
     },
     "createdAt": "2025-12-09T04:40:09.778Z"
+  },
+  {
+    "id": "97f19a0c-b6df-49cd-a3af-25cde5b7391f",
+    "email": "neel@gmail.com",
+    "name": "neel",
+    "passwordHash": "$2a$10$t9iorXlsKKbwhk8n7ROvHeZwJVFvA1Oro.B6tCWuYcxTpa9TwRQ6a",
+    "profile": {
+      "existingConditions": []
+    },
+    "createdAt": "2025-12-10T17:29:17.447Z"
   }
 ]

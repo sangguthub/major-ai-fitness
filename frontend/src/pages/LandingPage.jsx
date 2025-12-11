@@ -183,7 +183,7 @@ const LandingPage = ({ onAuthSuccess }) => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style jsx="true">{`
         @keyframes blob {
           0%, 100% {
             transform: translate(0, 0) scale(1);

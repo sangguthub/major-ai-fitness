@@ -11354,5 +11354,386 @@
       "processed_meat_freq": 1,
       "sugary_drinks_freq": 1
     }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-10T15:19:03.116Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-10T15:22:58.345Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-10T15:32:33.737Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-10T15:32:59.845Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-10T15:33:05.967Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 4,
+      "Low": 1,
+      "Medium": 95
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-10T15:36:23.229Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-10T15:36:28.766Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 26,
+      "Medium": 74
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 9,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-10T15:36:37.488Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 45,
+      "Medium": 55
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 0,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-10T15:36:43.493Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 12,
+      "Low": 39,
+      "Medium": 49
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 4,
+      "junk_food_freq": 0,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-10T15:44:01.384Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-10T15:46:38.093Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-11T03:57:50.609Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-11T03:58:14.171Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-11T03:58:25.114Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 92,
+      "Medium": 8
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 1,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765425771638",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:02:51.638Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 295,
+    "macroBreakdown": {
+      "Carbohydrates": 59,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765425779466",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:02:59.466Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 345,
+    "macroBreakdown": {
+      "Carbohydrates": 69,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765425780642",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:03:00.642Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 310,
+    "macroBreakdown": {
+      "Carbohydrates": 62,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "/mock-images/rice.jpg"
   }
 ]
