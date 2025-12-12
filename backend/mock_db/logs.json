@@ -11735,5 +11735,1715 @@
       "Protein": 6
     },
     "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-11T04:18:17.605Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 48,
+      "Medium": 52
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 0,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 5,
+      "junk_food_freq": 0,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-11T04:23:43.748Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 86,
+      "Medium": 14
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 0,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-11T04:24:05.676Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 28,
+      "Low": 4,
+      "Medium": 68
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 0,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 4,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765427105961",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:25:05.961Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 257,
+    "macroBreakdown": {
+      "Carbohydrates": 51,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "logId": "meal-1765427177946",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:26:17.946Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 267,
+    "macroBreakdown": {
+      "Carbohydrates": 53,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "/mock-images/rice.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-11T04:26:54.767Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 86,
+      "Medium": 14
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 0,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765427672180",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:34:32.180Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 299,
+    "macroBreakdown": {
+      "Carbohydrates": 60,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765427680565",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:34:40.565Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 350,
+    "macroBreakdown": {
+      "Carbohydrates": 70,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765427697914",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:34:57.914Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 274,
+    "macroBreakdown": {
+      "Carbohydrates": 55,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765427699291",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:34:59.291Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 293,
+    "macroBreakdown": {
+      "Carbohydrates": 59,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765427700267",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:35:00.267Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 263,
+    "macroBreakdown": {
+      "Carbohydrates": 53,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765427707612",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:35:07.612Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 286,
+    "macroBreakdown": {
+      "Carbohydrates": 57,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765427708631",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:35:08.631Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 343,
+    "macroBreakdown": {
+      "Carbohydrates": 69,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765427852959",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:37:32.959Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 244,
+    "macroBreakdown": {
+      "Carbohydrates": 49,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765428045940",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:40:45.940Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 323,
+    "macroBreakdown": {
+      "Carbohydrates": 65,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765428244196",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:44:04.196Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 314,
+    "macroBreakdown": {
+      "Carbohydrates": 63,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765428246385",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:44:06.385Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 281,
+    "macroBreakdown": {
+      "Carbohydrates": 56,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765428251361",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:44:11.361Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 299,
+    "macroBreakdown": {
+      "Carbohydrates": 60,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765428252141",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:44:12.141Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 253,
+    "macroBreakdown": {
+      "Carbohydrates": 51,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765428278303",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:44:38.303Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 289,
+    "macroBreakdown": {
+      "Carbohydrates": 58,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765428279119",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:44:39.119Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 272,
+    "macroBreakdown": {
+      "Carbohydrates": 54,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765428800622",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:53:20.622Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 312,
+    "macroBreakdown": {
+      "Carbohydrates": 62,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765428892446",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:54:52.447Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 304,
+    "macroBreakdown": {
+      "Carbohydrates": 61,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765428898634",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:54:58.634Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 356,
+    "macroBreakdown": {
+      "Carbohydrates": 71,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "mock_meal_photo.jpg"
+  },
+  {
+    "logId": "meal-1765429148183",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T04:59:08.183Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 306,
+    "macroBreakdown": {
+      "Carbohydrates": 61,
+      "Fat": 2,
+      "Protein": 6
+    },
+    "imageUrl": "traffic.png"
+  },
+  {
+    "logId": "meal-1765430086361",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:14:46.361Z",
+    "mealType": "Lunch",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 253,
+    "macroBreakdown": {
+      "Carbohydrates": 51,
+      "Fat": 2,
+      "Protein": 5
+    },
+    "imageUrl": "trash.webp"
+  },
+  {
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "risk_assessment",
+    "date": "2025-12-11T05:20:48.263Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 86,
+      "Medium": 14
+    },
+    "inputParams": {
+      "bmi": 23.87,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765430523364",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:22:03.364Z",
+    "mealType": "Breakfast",
+    "foodName": "Rice Plate",
+    "caloriesEstimated": 353,
+    "macroBreakdown": {
+      "Carbohydrates": 71,
+      "Fat": 2,
+      "Protein": 7
+    },
+    "imageUrl": "traffic.png"
+  },
+  {
+    "logId": "meal-1765430687445",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:24:47.445Z",
+    "mealType": "Breakfast",
+    "foodName": "Unidentified Meal (Default)",
+    "caloriesEstimated": 391,
+    "macroBreakdown": {
+      "carbohydrates": 50,
+      "fat": 15,
+      "protein": 20
+    },
+    "imageUrl": "trash.webp"
+  },
+  {
+    "logId": "meal-1765430811926",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:26:51.926Z",
+    "mealType": "Breakfast",
+    "foodName": "Unidentified Meal (Default)",
+    "caloriesEstimated": 389,
+    "macroBreakdown": {
+      "carbohydrates": 50,
+      "fat": 15,
+      "protein": 20
+    },
+    "imageUrl": "download.jpeg"
+  },
+  {
+    "logId": "meal-1765430868088",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:27:48.088Z",
+    "mealType": "Breakfast",
+    "foodName": "Unidentified Meal (Default)",
+    "caloriesEstimated": 399,
+    "macroBreakdown": {
+      "carbohydrates": 50,
+      "fat": 15,
+      "protein": 20
+    },
+    "imageUrl": "rice_plate.jpg.jpeg"
+  },
+  {
+    "logId": "meal-1765431030071",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:30:30.071Z",
+    "mealType": "Breakfast",
+    "foodName": "Chicken & Rice Plate",
+    "caloriesEstimated": 535,
+    "macroBreakdown": {
+      "carbohydrates": 65,
+      "fat": 15,
+      "protein": 40
+    },
+    "imageUrl": "rice_plate.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-11T05:32:35.602Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 86,
+      "Medium": 14
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 0,
+      "activity_level": 2,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765431165349",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:32:45.349Z",
+    "mealType": "Lunch",
+    "foodName": "Chicken & Rice Plate",
+    "caloriesEstimated": 550,
+    "macroBreakdown": {
+      "carbohydrates": 65,
+      "fat": 15,
+      "protein": 40
+    },
+    "imageUrl": "rice_plate.jpg"
+  },
+  {
+    "logId": "meal-1765431227014",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:33:47.014Z",
+    "mealType": "Breakfast",
+    "foodName": "Chicken & Rice Plate",
+    "caloriesEstimated": 570,
+    "macroBreakdown": {
+      "carbohydrates": 65,
+      "fat": 15,
+      "protein": 40
+    },
+    "imageUrl": "rice_plate.jpg"
+  },
+  {
+    "logId": "meal-1765431302755",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:35:02.755Z",
+    "mealType": "Lunch",
+    "foodName": "Chicken & Rice Plate",
+    "caloriesEstimated": 566,
+    "macroBreakdown": {
+      "carbohydrates": 65,
+      "fat": 15,
+      "protein": 40
+    },
+    "imageUrl": "rice_plate.jpg"
+  },
+  {
+    "logId": "meal-1765431340310",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:35:40.310Z",
+    "mealType": "Dinner",
+    "foodName": "Chicken & Rice Plate",
+    "caloriesEstimated": 582,
+    "macroBreakdown": {
+      "carbohydrates": 65,
+      "fat": 15,
+      "protein": 40
+    },
+    "imageUrl": "rice_plate.jpg"
+  },
+  {
+    "logId": "meal-1765431512276",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:38:32.276Z",
+    "mealType": "Breakfast",
+    "foodName": "Chicken & Rice Plate",
+    "caloriesEstimated": 566,
+    "macroBreakdown": {
+      "carbohydrates": 65,
+      "fat": 15,
+      "protein": 40
+    },
+    "imageUrl": "rice_plate.jpg"
+  },
+  {
+    "logId": "meal-1765431539212",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:38:59.212Z",
+    "mealType": "Lunch",
+    "foodName": "Unidentified Meal (Default)",
+    "caloriesEstimated": 405,
+    "macroBreakdown": {
+      "carbohydrates": 50,
+      "fat": 15,
+      "protein": 20
+    },
+    "imageUrl": "rice_plate.jpg.jpeg"
+  },
+  {
+    "logId": "meal-1765431547234",
+    "userId": "34c3f25d-7cca-46e4-b89e-b66e28c96d86",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:39:07.234Z",
+    "mealType": "Lunch",
+    "foodName": "Chicken & Rice Plate",
+    "caloriesEstimated": 552,
+    "macroBreakdown": {
+      "carbohydrates": 65,
+      "fat": 15,
+      "protein": 40
+    },
+    "imageUrl": "rice_plate.jpg"
+  },
+  {
+    "logId": "meal-1765431610868",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:40:10.868Z",
+    "mealType": "Lunch",
+    "foodName": "Unidentified Meal (Default)",
+    "caloriesEstimated": 393,
+    "macroBreakdown": {
+      "carbohydrates": 50,
+      "fat": 15,
+      "protein": 20
+    },
+    "imageUrl": "rice_plate.jpg.jpeg"
+  },
+  {
+    "logId": "meal-1765431792335",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:43:12.335Z",
+    "mealType": "Breakfast",
+    "foodName": "Chicken & Rice Plate",
+    "caloriesEstimated": 571,
+    "macroBreakdown": {
+      "carbohydrates": 65,
+      "fat": 15,
+      "protein": 40
+    },
+    "imageUrl": "rice_plate.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-11T05:48:07.192Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 2,
+      "Low": 12,
+      "Medium": 86
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 0,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765432105058",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-11T05:48:25.058Z",
+    "mealType": "Lunch",
+    "foodName": "Unidentified Meal (Default)",
+    "caloriesEstimated": 386,
+    "macroBreakdown": {
+      "carbohydrates": 50,
+      "fat": 15,
+      "protein": 20
+    },
+    "imageUrl": "rice_plate.jpg.jpeg"
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T09:49:14.889Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 0,
+      "Low": 13,
+      "Medium": 87
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765446981483",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-11T09:56:21.483Z",
+    "mealType": "Lunch",
+    "foodName": "Green Detox Smoothie",
+    "caloriesEstimated": 168,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 2,
+      "protein": 4
+    },
+    "imageUrl": "green_smoothie.jpg"
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:15:07.192Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 90,
+      "Medium": 10
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:15:16.763Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 12,
+      "Low": 3,
+      "Medium": 85
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:15:29.574Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 9,
+      "Low": 4,
+      "Medium": 87
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 5.5,
+      "junk_food_freq": 0,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:15:49.226Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 12,
+      "Low": 3,
+      "Medium": 85
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 4,
+      "junk_food_freq": 0,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:15:59.131Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 77,
+      "Low": 5,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 4,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:15:59.234Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 77,
+      "Low": 5,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 4,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:19:24.108Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 77,
+      "Low": 5,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 4,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:19:26.086Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 77,
+      "Low": 5,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 4,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:19:27.387Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 77,
+      "Low": 5,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 4,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:19:28.512Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 77,
+      "Low": 5,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 4,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:19:29.596Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 77,
+      "Low": 5,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 4,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:19:30.685Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 77,
+      "Low": 5,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 4,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:21:57.248Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 77,
+      "Low": 5,
+      "Medium": 18
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 4,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:22:07.316Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 8,
+      "Low": 72,
+      "Medium": 20
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 4,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:22:17.701Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 10,
+      "Low": 74,
+      "Medium": 16
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 5.5,
+      "junk_food_freq": 2,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:22:22.661Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 84,
+      "Medium": 16
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 5.5,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:22:29.684Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 86,
+      "Medium": 14
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 4,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-11T10:22:34.574Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 13,
+      "Low": 3,
+      "Medium": 84
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 1,
+      "sleep_time": 4,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765513631773",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T04:27:11.773Z",
+    "mealType": "Lunch",
+    "foodName": "Green Detox Smoothie",
+    "caloriesEstimated": 172,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 2,
+      "protein": 4
+    },
+    "imageUrl": "green_smoothie.jpg"
+  },
+  {
+    "logId": "meal-1765513829403",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T04:30:29.404Z",
+    "mealType": "Lunch",
+    "foodName": "Grilled Chicken with Veggies",
+    "caloriesEstimated": 569,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 20,
+      "protein": 45
+    },
+    "imageUrl": "grilled_chicken_plate.jpg"
+  },
+  {
+    "logId": "meal-1765513855481",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T04:30:55.481Z",
+    "mealType": "Breakfast",
+    "foodName": "Grilled Chicken with Veggies",
+    "caloriesEstimated": 565,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 20,
+      "protein": 45
+    },
+    "imageUrl": "grilled_chicken_plate.jpg"
+  },
+  {
+    "logId": "meal-1765513901969",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T04:31:41.969Z",
+    "mealType": "Breakfast",
+    "foodName": "Masala Dosa",
+    "caloriesEstimated": 517,
+    "macroBreakdown": {
+      "carbohydrates": 70,
+      "fat": 22,
+      "protein": 10
+    },
+    "imageUrl": "masala_dosa.jpg"
+  },
+  {
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "risk_assessment",
+    "date": "2025-12-12T04:33:27.450Z",
+    "risk": "Low",
+    "probabilities": {
+      "High": 0,
+      "Low": 90,
+      "Medium": 10
+    },
+    "inputParams": {
+      "bmi": 21.29,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 0,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765514080767",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T04:34:40.767Z",
+    "mealType": "Snack",
+    "foodName": "Green Detox Smoothie",
+    "caloriesEstimated": 182,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 2,
+      "protein": 4
+    },
+    "imageUrl": "green_smoothie.jpg"
+  },
+  {
+    "logId": "meal-1765514400528",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T04:40:00.528Z",
+    "mealType": "Breakfast",
+    "foodName": "Green Detox Smoothie",
+    "caloriesEstimated": 201,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 2,
+      "protein": 4
+    },
+    "imageUrl": "green_smoothie.jpg"
+  },
+  {
+    "logId": "meal-1765514477286",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T04:41:17.286Z",
+    "mealType": "Lunch",
+    "foodName": "Veg Hakka Noodles",
+    "caloriesEstimated": 495,
+    "macroBreakdown": {
+      "carbohydrates": 80,
+      "fat": 14,
+      "protein": 10
+    },
+    "imageUrl": "noodles.jpg"
+  },
+  {
+    "logId": "meal-1765514571751",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T04:42:51.751Z",
+    "mealType": "Lunch",
+    "foodName": "Paneer Butter Masala",
+    "caloriesEstimated": 735,
+    "macroBreakdown": {
+      "carbohydrates": 32,
+      "fat": 50,
+      "protein": 22
+    },
+    "imageUrl": "paneer_butter_masala.jpg"
+  },
+  {
+    "logId": "meal-1765514791146",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T04:46:31.146Z",
+    "mealType": "Breakfast",
+    "foodName": "Green Detox Smoothie",
+    "caloriesEstimated": 213,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 2,
+      "protein": 4
+    },
+    "imageUrl": "green_smoothie.jpg"
+  },
+  {
+    "logId": "meal-1765515489930",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T04:58:09.930Z",
+    "mealType": "Lunch",
+    "foodName": "Grilled Chicken with Veggies",
+    "caloriesEstimated": 563,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 20,
+      "protein": 45
+    },
+    "imageUrl": "grilled_chicken_plate.jpg"
+  },
+  {
+    "logId": "meal-1765515532030",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T04:58:52.030Z",
+    "mealType": "Snack",
+    "foodName": "Grilled Chicken with Veggies",
+    "caloriesEstimated": 545,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 20,
+      "protein": 45
+    },
+    "imageUrl": "grilled_chicken_plate.jpg"
+  },
+  {
+    "logId": "meal-1765515558832",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T04:59:18.832Z",
+    "mealType": "Dinner",
+    "foodName": "Grilled Chicken with Veggies",
+    "caloriesEstimated": 536,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 20,
+      "protein": 45
+    },
+    "imageUrl": "grilled_chicken_plate.jpg"
+  },
+  {
+    "logId": "meal-1765515940223",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T05:05:40.223Z",
+    "mealType": "Dinner",
+    "foodName": "Unidentified Meal",
+    "caloriesEstimated": 397,
+    "macroBreakdown": {
+      "carbohydrates": 45,
+      "fat": 15,
+      "protein": 20
+    },
+    "imageUrl": "ice_cream.jpg"
+  },
+  {
+    "logId": "meal-1765516019923",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T05:06:59.923Z",
+    "mealType": "Lunch",
+    "foodName": "Grilled Chicken with Veggies",
+    "caloriesEstimated": 558,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 20,
+      "protein": 45
+    },
+    "imageUrl": "grilled_chicken_plate.jpg"
+  },
+  {
+    "logId": "meal-1765516431551",
+    "userId": "a248dd5c-8fa3-4e2a-94ba-18aa88bf0377",
+    "type": "meal_intake",
+    "date": "2025-12-12T05:13:51.551Z",
+    "mealType": "Lunch",
+    "foodName": "Green Detox Smoothie",
+    "caloriesEstimated": 144,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 2,
+      "protein": 4
+    },
+    "imageUrl": "green_smoothie.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-12T05:16:45.063Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 17,
+      "Low": 1,
+      "Medium": 82
+    },
+    "inputParams": {
+      "bmi": 24.62,
+      "age": 28,
+      "gender": 0,
+      "activity_level": 2,
+      "family_history": 1,
+      "sleep_time": 7,
+      "junk_food_freq": 0,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765516686636",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-12T05:18:06.636Z",
+    "mealType": "Lunch",
+    "foodName": "Paneer Butter Masala",
+    "caloriesEstimated": 718,
+    "macroBreakdown": {
+      "carbohydrates": 32,
+      "fat": 50,
+      "protein": 22
+    },
+    "imageUrl": "paneer_butter_masala.jpg"
+  },
+  {
+    "logId": "meal-1765516714538",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-12T05:18:34.538Z",
+    "mealType": "Breakfast",
+    "foodName": "Paneer Butter Masala",
+    "caloriesEstimated": 701,
+    "macroBreakdown": {
+      "carbohydrates": 32,
+      "fat": 50,
+      "protein": 22
+    },
+    "imageUrl": "paneer_butter_masala.jpg"
+  },
+  {
+    "logId": "meal-1765517032202",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-12T05:23:52.202Z",
+    "mealType": "Snack",
+    "foodName": "Vanilla Ice Cream (1 cup)",
+    "caloriesEstimated": 366,
+    "macroBreakdown": {
+      "carbohydrates": 40,
+      "fat": 22,
+      "protein": 6
+    },
+    "imageUrl": "ice_cream.jpg"
+  },
+  {
+    "logId": "meal-1765530040153",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-12T09:00:40.153Z",
+    "mealType": "Lunch",
+    "foodName": "Paneer Butter Masala",
+    "caloriesEstimated": 736,
+    "macroBreakdown": {
+      "carbohydrates": 32,
+      "fat": 50,
+      "protein": 22
+    },
+    "imageUrl": "paneer_butter_masala.jpg"
+  },
+  {
+    "logId": "meal-1765531073782",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-12T09:17:53.782Z",
+    "mealType": "Breakfast",
+    "foodName": "Grilled Chicken with Veggies",
+    "caloriesEstimated": 573,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 20,
+      "protein": 45
+    },
+    "imageUrl": "grilled_chicken_plate.jpg"
+  },
+  {
+    "logId": "meal-1765531524821",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-12T09:25:24.821Z",
+    "mealType": "Lunch",
+    "foodName": "Veg Hakka Noodles",
+    "caloriesEstimated": 505,
+    "macroBreakdown": {
+      "carbohydrates": 80,
+      "fat": 14,
+      "protein": 10
+    },
+    "imageUrl": "noodles.jpg"
+  },
+  {
+    "logId": "meal-1765531929355",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-12T09:32:09.355Z",
+    "mealType": "Breakfast",
+    "foodName": "Grilled Chicken with Veggies",
+    "caloriesEstimated": 549,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 20,
+      "protein": 45
+    },
+    "imageUrl": "grilled_chicken_plate.jpg"
+  },
+  {
+    "logId": "meal-1765532635411",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-12T09:43:55.411Z",
+    "mealType": "Lunch",
+    "foodName": "Vanilla Ice Cream (1 cup)",
+    "caloriesEstimated": 381,
+    "macroBreakdown": {
+      "carbohydrates": 40,
+      "fat": 22,
+      "protein": 6
+    },
+    "imageUrl": "ice_cream.jpg"
+  },
+  {
+    "logId": "meal-1765533190169",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-12T09:53:10.169Z",
+    "mealType": "Lunch",
+    "foodName": "Paneer Butter Masala",
+    "caloriesEstimated": 707,
+    "macroBreakdown": {
+      "carbohydrates": 32,
+      "fat": 50,
+      "protein": 22
+    },
+    "imageUrl": "paneer_butter_masala.jpg"
+  },
+  {
+    "logId": "meal-1765534777566",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-12T10:19:37.566Z",
+    "mealType": "Breakfast",
+    "foodName": "Paneer Butter Masala",
+    "caloriesEstimated": 705,
+    "macroBreakdown": {
+      "carbohydrates": 32,
+      "fat": 50,
+      "protein": 22
+    },
+    "imageUrl": "paneer_butter_masala.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-12T10:29:27.919Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 22,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 28,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765535384568",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-12T10:29:44.568Z",
+    "mealType": "Lunch",
+    "foodName": "Grilled Chicken with Veggies",
+    "caloriesEstimated": 554,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 20,
+      "protein": 45
+    },
+    "imageUrl": "grilled_chicken_plate.jpg"
+  },
+  {
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "risk_assessment",
+    "date": "2025-12-12T10:48:01.791Z",
+    "risk": "High",
+    "probabilities": {
+      "High": 56,
+      "Low": 3,
+      "Medium": 41
+    },
+    "inputParams": {
+      "bmi": 45.04,
+      "age": 22,
+      "gender": 1,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "logId": "meal-1765536502177",
+    "userId": "02a83dde-b977-4d2f-847d-457e7a40540b",
+    "type": "meal_intake",
+    "date": "2025-12-12T10:48:22.177Z",
+    "mealType": "Breakfast",
+    "foodName": "Veg Hakka Noodles",
+    "caloriesEstimated": 487,
+    "macroBreakdown": {
+      "carbohydrates": 80,
+      "fat": 14,
+      "protein": 10
+    },
+    "imageUrl": "noodles.jpg"
+  },
+  {
+    "logId": "meal-1765536570810",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-12T10:49:30.810Z",
+    "mealType": "Dinner",
+    "foodName": "Vanilla Ice Cream (1 cup)",
+    "caloriesEstimated": 370,
+    "macroBreakdown": {
+      "carbohydrates": 40,
+      "fat": 22,
+      "protein": 6
+    },
+    "imageUrl": "ice_cream.jpg"
   }
 ]

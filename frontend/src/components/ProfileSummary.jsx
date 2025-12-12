@@ -1,5 +1,4 @@
 import React from 'react';
-// CORRECTED IMPORT: FaChartLine is now explicitly included
 import { FaUserCircle, FaEnvelope, FaWeight, FaRulerVertical, FaCalendarAlt, FaFireAlt, FaChartLine } from 'react-icons/fa'; 
 
 // Helper component for clean metric display
@@ -13,16 +12,24 @@ const SummaryItem = ({ title, value, color }) => (
 const ProfileSummary = ({ profile, user }) => {
     
     // Destructure core data from profile and user props
-    // We assume 'user' contains name and email from App.jsx
     const { name, email } = user || {};
     const { 
         age, gender, height, weight, bmi, tdee, dailyCalorieTarget,
-        activityLevel, goal, dietPreference, login_streak
+        activityLevel, goal, dietPreference, login_streak,
+        latestRiskScore // <<< NEW FIELD DESTRUCTURED HERE
     } = profile;
 
     // Map numerical values to user-friendly strings
     const activityMap = { 0: 'Sedentary', 1: 'Active', 2: 'Very Active' };
     const goalMap = { 'maintain': 'Maintain Weight', 'lose': 'Lose Weight', 'gain': 'Gain Weight' };
+    
+    // Helper function to color the risk score
+    const getRiskColor = (score) => {
+        if (score === 'High') return 'text-red-500';
+        if (score === 'Medium') return 'text-yellow-500';
+        if (score === 'Low') return 'text-ai-green';
+        return 'text-gray-400';
+    };
 
     return (
         <div className="space-y-6">
@@ -52,7 +59,6 @@ const ProfileSummary = ({ profile, user }) => {
                 
                 {/* Metric Card Component */}
                 {([
-                    // Note: FaChartLine is correctly used here now
                     { label: 'BMI Score', value: bmi || 'N/A', icon: FaChartLine, color: 'text-red-400' }, 
                     { label: 'TDEE (Maintenance)', value: `${tdee || 'N/A'} kcal`, icon: FaChartLine, color: 'text-ai-green' },
                     { label: 'Daily Calorie Target', value: `${dailyCalorieTarget || 'N/A'} kcal`, icon: FaChartLine, color: 'text-blue-400' },
@@ -77,11 +83,18 @@ const ProfileSummary = ({ profile, user }) => {
                 <SummaryItem title="Current Goal" value={goalMap[goal] || 'N/A'} color="text-indigo-400" />
                 <SummaryItem title="Activity Level" value={activityMap[activityLevel] || 'N/A'} color="text-yellow-400" />
                 <SummaryItem title="Diet Preference" value={dietPreference || 'N/A'} color="text-green-400" />
-                <SummaryItem title="Risk Score" value={"(Run Check)"} color="text-red-400" />
+                
+                {/* DISPLAY THE DYNAMIC RISK SCORE HERE */}
+                <SummaryItem 
+                    title="Latest Risk Score" 
+                    value={latestRiskScore || "(Run Check)"} 
+                    color={getRiskColor(latestRiskScore)} 
+                />
+                
             </div>
             
             <p className="pt-6 text-sm text-gray-500">
-                To update this information, please navigate to the 'Profile & Goal' module in the sidebar.
+                To update your prediction, please navigate to the 'Health Risk Check' module.
             </p>
         </div>
     );

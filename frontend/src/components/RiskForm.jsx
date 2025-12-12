@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import api from '../api/api';
+import { FaHeartbeat, FaSpinner } from 'react-icons/fa'; // Added FaSpinner for loading
 
-// RiskForm no longer needs to collect the new features, as they are in the profile object.
-const RiskForm = ({ profile }) => { 
+// RiskForm now receives fetchProfile as a prop from Dashboard.jsx
+const RiskForm = ({ profile, fetchProfile }) => { 
     const [formData, setFormData] = useState({
         family_history: 0, // 0=No, 1=Yes 
         sleep_time: 7.0,   // float
@@ -16,6 +17,7 @@ const RiskForm = ({ profile }) => {
         const { name, value, type, checked } = e.target;
         setFormData(prev => ({
             ...prev,
+            // Handle checkbox (0/1) vs. number (float/int) conversion
             [name]: type === 'checkbox' ? (checked ? 1 : 0) : (type === 'number' ? parseFloat(value) : parseInt(value))
         }));
         setError('');
@@ -27,9 +29,13 @@ const RiskForm = ({ profile }) => {
         setResult(null);
         setError('');
 
-        // -------------------------------------------------------------
-        // CRITICAL UPDATE: Including the 4 new features from the profile prop
-        // -------------------------------------------------------------
+        // Ensure profile fields used in payload are available
+        if (!profile.bmi || !profile.age) {
+            setError("Missing BMI or Age. Please complete Profile & Goal first.");
+            setLoading(false);
+            return;
+        }
+
         const payload = {
             // Core Biometrics
             bmi: profile.bmi, 
@@ -42,19 +48,21 @@ const RiskForm = ({ profile }) => {
             sleep_time: formData.sleep_time,
             junk_food_freq: formData.junk_food_freq,
 
-            // NEW Risk Factor Inputs from ProfileForm
-            daily_water_intake: profile.daily_water_intake || 2.0, // Default for safety
+            // NEW Advanced Risk Factor Inputs from Profile (using safe defaults if missing)
+            daily_water_intake: profile.daily_water_intake || 2.0, 
             veg_fruit_servings: profile.veg_fruit_servings || 3,
             processed_meat_freq: profile.processed_meat_freq || 1,
             sugary_drinks_freq: profile.sugary_drinks_freq || 1,
         };
-        // -------------------------------------------------------------
 
         try {
             const response = await api.post('/risk/predict', payload);
             setResult(response.data.result);
             
-            // NOTE: fetchProfile() is commented out to prevent the UI synchronization glitch
+            // CRITICAL FIX: Trigger the profile re-fetch immediately after the backend logs the new score.
+            if (fetchProfile) {
+                await fetchProfile();
+            }
 
         } catch (err) {
             console.error('Risk prediction failed:', err.response?.data);
@@ -66,7 +74,7 @@ const RiskForm = ({ profile }) => {
 
     return (
         <form onSubmit={handleSubmit} className="space-y-4 text-sm">
-            {/* ... (Existing form inputs remain the same) ... */}
+            {/* User Input Fields */}
             <div className="flex justify-between items-center bg-[#1E1E1E] p-3 rounded-lg border border-[#2D333B]">
                 <label htmlFor="family_history" className="font-medium text-gray-300">Family History of Lifestyle Disease:</label>
                 <input 
@@ -108,13 +116,23 @@ const RiskForm = ({ profile }) => {
             <button 
                 type="submit" 
                 disabled={loading} 
-                className={`w-full p-3 rounded font-semibold shadow-md ${loading ? 'bg-gray-600' : 'btn-risk'}`}
+                className={`w-full p-3 rounded font-semibold shadow-md btn-risk flex items-center justify-center space-x-2 ${loading ? 'opacity-50 cursor-not-allowed' : 'btn-risk'}`}
             >
-                {loading ? 'Analyzing...' : 'Predict Health Risk'}
+                {loading ? (
+                    <>
+                        <FaSpinner className="animate-spin" />
+                        <span>Analyzing...</span>
+                    </>
+                ) : (
+                    <>
+                        <FaHeartbeat />
+                        <span>Predict Health Risk</span>
+                    </>
+                )}
             </button>
             {error && <p className="text-red-400 mt-2">{error}</p>}
 
-            {/* Display Results (Enhanced) */}
+            {/* Display Results */}
             {result && (
                 <div className="mt-4 p-4 border border-gray-700 rounded-lg shadow-md bg-[#1E1E1E]">
                     <h4 className="text-xl font-bold mb-3 text-center text-ai-green">Diagnosis Result</h4>
@@ -133,25 +151,34 @@ const RiskForm = ({ profile }) => {
                     {/* Probability Breakdown */}
                     <div className="space-y-2">
                         <p className="font-semibold text-gray-500 border-b border-gray-700 pb-1">Probability Breakdown:</p>
-                        {Object.entries(result.probabilities).map(([riskLevel, percentage]) => (
-                            <div key={riskLevel}>
-                                <div className="flex justify-between text-sm">
-                                    <span className="font-medium">{riskLevel} Risk</span>
-                                    <span className="font-bold">{percentage}%</span>
+                        {Object.entries(result.probabilities).map(([riskLevel, percentage]) => {
+                            
+                            // Determine bar color (Using standard green-500 for reliable rendering)
+                            const barColorClass = riskLevel === 'High' ? 'bg-red-500' : 
+                                                  riskLevel === 'Medium' ? 'bg-orange-400' : 
+                                                  'bg-green-500'; // FIX: Using a reliable Tailwind class
+                            
+                            // FIX: Ensure minimum width for visibility (5% or 10px, whichever is larger)
+                            // We use Math.max to prevent the bar from being invisible when percentage is low (e.g., 5%)
+                            const barWidth = Math.max(5, percentage); 
+
+                            return (
+                                <div key={riskLevel}>
+                                    <div className="flex justify-between text-sm">
+                                        <span className="font-medium">{riskLevel} Risk</span>
+                                        <span className="font-bold">{percentage}%</span>
+                                    </div>
+                                    
+                                    {/* Simple Progress Bar Mockup */}
+                                    <div className="w-full bg-gray-800 rounded-full h-2">
+                                        <div 
+                                            className={`h-2 rounded-full ${barColorClass}`} 
+                                            style={{ width: `${barWidth}%` }} // Using fixed barWidth
+                                        ></div>
+                                    </div>
                                 </div>
-                                
-                                {/* Simple Progress Bar Mockup */}
-                                <div className="w-full bg-gray-800 rounded-full h-2">
-                                    <div 
-                                        className={`h-2 rounded-full 
-                                            ${riskLevel === 'High' ? 'bg-red-500' : 
-                                              riskLevel === 'Medium' ? 'bg-orange-400' : 
-                                              'bg-ai-green'}`} 
-                                        style={{ width: `${percentage}%` }}
-                                    ></div>
-                                </div>
-                            </div>
-                        ))}
+                            )
+                        })}
                     </div>
                 </div>
             )}

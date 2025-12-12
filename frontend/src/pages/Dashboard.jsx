@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
-// IMPORT THE NEW COMPONENT
+import React, { useState, useEffect, useCallback } from 'react';
+import api from '../api/api'; // Assuming you have an api service setup
 import ProfileSummary from '../components/ProfileSummary'; 
 import ProfileForm from '../components/ProfileForm';
 import RiskForm from '../components/RiskForm';
 import CalorieUpload from '../components/CalorieUpload';
 import ProgressChart from '../components/ProgressChart';
-import NutrientWarning from '../components/NutrientWarning';
+import NutrientWarning from '../components/NutrientWarning'; // Updated import
 import Recommendations from '../pages/Recommendations';
 
 
-// Systematically ordered menu for the sidebar (UPDATED)
+// Systematically ordered menu for the sidebar
 const DASHBOARD_MENU = [
-    // 1. New Summary Page (Default view)
     { id: 'summary', name: '🏠 Dashboard Summary', component: ProfileSummary }, 
     { id: 'profile', name: '👤 Profile & Goal', component: ProfileForm },
     { id: 'risk', name: '❤️ Health Risk Check', component: RiskForm },
@@ -21,8 +20,9 @@ const DASHBOARD_MENU = [
 ];
 
 
-const Dashboard = ({ profile, setProfile, fetchProfile, user }) => { // Passed user prop
-    // State to track which item in the sidebar is active (Defaulting to the Summary)
+const Dashboard = ({ profile, setProfile, fetchProfile, user }) => { 
+    // State for Nutrient Warnings
+    const [nutrientWarnings, setNutrientWarnings] = useState([]);
     const [activeModule, setActiveModule] = useState(DASHBOARD_MENU[0].id);
     
     // Find the component currently selected
@@ -31,16 +31,37 @@ const Dashboard = ({ profile, setProfile, fetchProfile, user }) => { // Passed u
     // Check for essential data needed for BMI/BMR/Risk Calculation
     const isProfileIncomplete = !profile.age || !profile.height || !profile.weight;
 
+    // --- FUNCTION TO RE-FETCH NUTRIENT WARNINGS ---
+    const fetchNutrientWarnings = useCallback(async () => {
+        try {
+            const response = await api.get('/nutrients/check');
+            setNutrientWarnings(response.data.warnings);
+        } catch (err) {
+            // Log 401 errors, but do not crash the display
+            console.error("Nutrient check failed:", err.response?.status === 401 ? "Unauthorized or missing profile data" : err);
+            setNutrientWarnings([]);
+        }
+    }, []); 
+
+    // Fetch warnings on initial load
+    useEffect(() => {
+        // Only run if the user is authenticated (which is implied here)
+        fetchNutrientWarnings();
+    }, [fetchNutrientWarnings]);
+
+
     // --- GAMIFICATION FEATURE: DAILY STREAK ---
     const currentStreak = profile.login_streak || 0;
 
-    // Props passed to the active component (ADDED user)
+    // Props passed to the active component
     const componentProps = {
         profile,
-        user, // Pass the user object for name/email
+        user, 
         setProfile,
         fetchProfile,
         dailyCalorieTarget: profile.dailyCalorieTarget,
+        // CRITICAL PROP: Passed to CalorieUpload to trigger update
+        fetchNutrientWarnings, 
     };
     
     // Determine the title of the active content pane
@@ -59,7 +80,8 @@ const Dashboard = ({ profile, setProfile, fetchProfile, user }) => { // Passed u
                 
                 {/* Nutrient Warning fixed at the top of the sidebar */}
                 <div className="mb-8">
-                    <NutrientWarning /> 
+                    {/* CRITICAL PROP: Pass warnings state to NutrientWarning */}
+                    <NutrientWarning warnings={nutrientWarnings} /> 
                 </div>
 
                 {/* === DAILY STREAK DISPLAY === */}

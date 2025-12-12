@@ -1,55 +1,44 @@
 const express = require('express');
-const { protect } = require('../middleware/auth');
-const { loadLogs } = require('../utils/mockDB');
-
 const router = express.Router();
+const { protect } = require('../middleware/auth'); // Assuming protect middleware is needed
+
+// --- MOCK ANALYTICS DATA ---
+// This provides the historical arrays needed by ProgressChart.jsx
+const MOCK_ANALYTICS_DATA = {
+    // Dates must be consistent for weight and calorie tracking
+    "weightHistory": [
+        { "date": "07-Dec", "weight": 78.5 },
+        { "date": "08-Dec", "weight": 78.1 },
+        { "date": "09-Dec", "weight": 77.8 },
+        { "date": "10-Dec", "weight": 77.5 },
+        { "date": "11-Dec", "weight": 77.3 }
+    ],
+    "calorieHistory": [
+        { "date": "07-Dec", "calories": 1950 },
+        { "date": "08-Dec", "calories": 2100 },
+        { "date": "09-Dec", "calories": 1800 },
+        { "date": "10-Dec", "calories": 2200 },
+        { "date": "11-Dec", "calories": 1750 }
+    ],
+    "riskHistory": [
+        // Risk scores are discrete (1=Low, 2=Medium, 3=High)
+        { "date": "07-Dec", "score": 3 }, // High
+        { "date": "09-Dec", "score": 2 }, // Medium
+        { "date": "11-Dec", "score": 1 }  // Low
+    ]
+};
 
 // @route GET /api/analytics/progress
-// @desc Get weight, calorie, and risk history for charting
+// Provides historical data for weight, calories, and risk score.
 router.get('/progress', protect, (req, res) => {
-    const userId = req.user.id;
-    const allLogs = loadLogs().filter(log => log.userId === userId);
-
-    const weightHistory = [];
-    const calorieHistory = [];
-    const riskHistory = [];
-
-    // Filter and structure data for frontend charting
-    allLogs.forEach(log => {
-        const date = new Date(log.date).toISOString().split('T')[0]; // Use date only
-
-        if (log.type === 'meal_intake') {
-            // Aggregate calories per day (simple aggregation)
-            let dailyEntry = calorieHistory.find(e => e.date === date);
-            if (!dailyEntry) {
-                dailyEntry = { date, calories: 0 };
-                calorieHistory.push(dailyEntry);
-            }
-            dailyEntry.calories += log.caloriesEstimated;
-
-        } else if (log.type === 'risk_assessment' && log.inputParams.weight) {
-            // Use weight input from risk assessment as a historical weight point
-            // This is a mock since we don't have a separate weight log
-            if (!weightHistory.some(e => e.date === date)) {
-                weightHistory.push({ date, weight: log.inputParams.weight });
-            }
-            
-            // Map risk levels to a numerical score for charting (e.g., Low=1, Medium=2, High=3)
-            const riskMap = { 'Low': 1, 'Medium': 2, 'High': 3 };
-            riskHistory.push({ 
-                date, 
-                score: riskMap[log.risk],
-                risk: log.risk 
-            });
-        }
-    });
-
-    res.json({
-        weightHistory: weightHistory.sort((a, b) => new Date(a.date) - new Date(b.date)),
-        calorieHistory: calorieHistory.sort((a, b) => new Date(a.date) - new Date(b.date)),
-        riskHistory: riskHistory.sort((a, b) => new Date(a.date) - new Date(b.date)),
-        target: req.user.profile.dailyCalorieTarget || 2000 // Send target for the chart
-    });
+    try {
+        console.log("DEBUG: Serving mock analytics progress data.");
+        // Returns the necessary data structure directly
+        return res.json(MOCK_ANALYTICS_DATA);
+    } catch (error) {
+        console.error("ERROR: Failed to serve mock analytics data:", error);
+        return res.status(500).json({ message: "Failed to load historical analytics data." });
+    }
 });
 
 module.exports = router;

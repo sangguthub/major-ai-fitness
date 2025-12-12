@@ -29,6 +29,7 @@ app.use('/api/recommendation', recommendationRoutes);
 app.use('/api/nutrients', nutrientsRoutes);
 app.use('/api/analytics', analyticsRoutes);
 
+
 app.get('/', (req, res) => {
     res.send('AI Fitness Backend API is running!');
 });

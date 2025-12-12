@@ -1,73 +1,151 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import json
 import random
 
-# --- Configuration ---
 app = Flask(__name__)
-CORS(app) 
+CORS(app) # Enable CORS for cross-origin requests from Node/React
 
-# MOCK DATA: Simulates the output of a trained CNN model
-MOCK_FOOD_DB = {
-    "dosa": {"calories": 120, "carb": 20, "protein": 4, "fat": 3},
-    "chapati": {"calories": 80, "carb": 15, "protein": 3, "fat": 1},
-    "rice_plate": {"calories": 300, "carb": 60, "protein": 6, "fat": 2},
-    "chicken_curry": {"calories": 250, "carb": 5, "protein": 35, "fat": 10},
-    "salad": {"calories": 100, "carb": 10, "protein": 5, "fat": 5},
+# --- MOCK FOOD DATABASE ---
+# Provides realistic calorie and macro data based on the input filename.
+FOOD_DATABASE = {
+    
+  # 1. Healthy / Low Calorie
+  "sprouts_salad.jpg": {
+    "foodName": "Sprouts & Veggie Salad",
+    "caloriesEstimated": 180,
+    "macroBreakdown": {"protein": 12, "fat": 3, "carbohydrates": 28}
+  },
+  "banana.jpg": {
+    "foodName": "Banana",
+    "caloriesEstimated": 105,
+    "macroBreakdown": {"protein": 1, "fat": 0, "carbohydrates": 27}
+  },
+  "green_smoothie.jpg": {
+    "foodName": "Green Detox Smoothie",
+    "caloriesEstimated": 160,
+    "macroBreakdown": {"protein": 4, "fat": 2, "carbohydrates": 35}
+  },
+  "boiled_eggs.jpg": {
+    "foodName": "Boiled Eggs (2 pcs)",
+    "caloriesEstimated": 140,
+    "macroBreakdown": {"protein": 12, "fat": 10, "carbohydrates": 1}
+  },
+  "paneer_tikka.jpg": {
+    "foodName": "Paneer Tikka",
+    "caloriesEstimated": 300,
+    "macroBreakdown": {"protein": 22, "fat": 18, "carbohydrates": 8}
+  },
+  "veg_upma.jpg": {
+    "foodName": "Veg Upma",
+    "caloriesEstimated": 230,
+    "macroBreakdown": {"protein": 6, "fat": 7, "carbohydrates": 36}
+  },
+
+  # 2. Medium / Balanced
+  "masala_dosa.jpg": {
+    "foodName": "Masala Dosa",
+    "caloriesEstimated": 520,
+    "macroBreakdown": {"protein": 10, "fat": 22, "carbohydrates": 70}
+  },
+  "vegetable_pulao.jpg": {
+    "foodName": "Vegetable Pulao",
+    "caloriesEstimated": 480,
+    "macroBreakdown": {"protein": 8, "fat": 12, "carbohydrates": 78}
+  },
+  "grilled_chicken_plate.jpg": {
+    "foodName": "Grilled Chicken with Veggies",
+    "caloriesEstimated": 560,
+    "macroBreakdown": {"protein": 45, "fat": 20, "carbohydrates": 35}
+  },
+  "dal_roti.jpg": {
+    "foodName": "Dal with 2 Rotis",
+    "caloriesEstimated": 450,
+    "macroBreakdown": {"protein": 18, "fat": 10, "carbohydrates": 65}
+  },
+  "noodles.jpg": {
+    "foodName": "Veg Hakka Noodles",
+    "caloriesEstimated": 500,
+    "macroBreakdown": {"protein": 10, "fat": 14, "carbohydrates": 80}
+  },
+  "poha.jpg": {
+    "foodName": "Kanda Poha",
+    "caloriesEstimated": 320,
+    "macroBreakdown": {"protein": 8, "fat": 10, "carbohydrates": 50}
+  },
+
+  # 3. High Calorie / High Fat
+  "butter_chicken.jpg": {
+    "foodName": "Butter Chicken",
+    "caloriesEstimated": 780,
+    "macroBreakdown": {"protein": 38, "fat": 48, "carbohydrates": 20}
+  },
+  "paneer_butter_masala.jpg": {
+    "foodName": "Paneer Butter Masala",
+    "caloriesEstimated": 720,
+    "macroBreakdown": {"protein": 22, "fat": 50, "carbohydrates": 32}
+  },
+  "samosa.jpg": {
+    "foodName": "Samosa (1 pc)",
+    "caloriesEstimated": 260,
+    "macroBreakdown": {"protein": 4, "fat": 17, "carbohydrates": 24}
+  },
+  "donut.jpg": {
+    "foodName": "Chocolate Donut",
+    "caloriesEstimated": 420,
+    "macroBreakdown": {"protein": 5, "fat": 22, "carbohydrates": 52}
+  },
+  "ice_cream.jpg": {
+    "foodName": "Vanilla Ice Cream (1 cup)",
+    "caloriesEstimated": 380,
+    "macroBreakdown": {"protein": 6, "fat": 22, "carbohydrates": 40}
+  },
+  "pav_bhaji.jpg": {
+    "foodName": "Pav Bhaji",
+    "caloriesEstimated": 700,
+    "macroBreakdown": {"protein": 12, "fat": 30, "carbohydrates": 98}
+  }
 }
 
-# Helper function to mock the CNN classification (based on filename)
-def mock_cnn_classify(filename):
-    """Simulates image classification by checking keywords in the filename."""
-    name = filename.lower()
-    for dish, data in MOCK_FOOD_DB.items():
-        if dish in name:
-            return dish
-    # Default if classification fails
-    return random.choice(list(MOCK_FOOD_DB.keys()))
+
+# Add a default entry for unknown images
+DEFAULT_FOOD = {
+    "foodName": "Unidentified Meal (Default)",
+    "caloriesEstimated": 400,
+    "macroBreakdown": {"protein": 20, "fat": 15, "carbohydrates": 50},
+}
+
 
 @app.route('/predict-calories', methods=['POST'])
 def predict_calories():
-    # File check is mocked using a dummy filename if no file is uploaded for local testing
-    if 'file' not in request.files or not request.files['file'].filename:
-        # Fallback for API testing (e.g., in Postman without file upload)
-        filename = request.form.get('filename', 'default_rice_plate.jpg') 
-        # return jsonify({"error": "No image file provided."}), 400 # Uncomment this for strict implementation
-    else:
-        file = request.files['file']
-        filename = file.filename
-        # In a real system, you'd save the file and pass the path to the TensorFlow/Keras model here.
-        # file.save(f"uploads/{filename}")
-
+    """
+    Simulates a Deep Learning CNN prediction based on the provided filename.
+    """
     try:
-        # 1. MOCK CLASSIFICATION
-        food_name_key = mock_cnn_classify(filename)
-        base_data = MOCK_FOOD_DB[food_name_key]
+        data = request.json
+        filename = data.get('filename')
         
-        # 2. MOCK PORTION ESTIMATION (e.g., multiplying by a random portion factor)
-        # Real portion estimation requires complex CNN/segmentation
-        portion_factor = random.uniform(0.8, 1.2) 
+        if not filename:
+            # Should be prevented by frontend validation, but included for API safety
+            return jsonify({"message": "No filename provided"}), 400
 
-        estimated_calories = round(base_data['calories'] * portion_factor)
-        estimated_carb = round(base_data['carb'] * portion_factor)
-        estimated_protein = round(base_data['protein'] * portion_factor)
-        estimated_fat = round(base_data['fat'] * portion_factor)
+        # --- MOCK PREDICTION LOGIC ---
+        # Look up the details based on the filename (case-insensitive lookup).
+        # We use .copy() to ensure the random variance only affects the result, not the database template.
+        prediction = FOOD_DATABASE.get(filename.lower(), DEFAULT_FOOD).copy()
+        
+        # Add a small random variance for realism
+        variance = random.randint(-20, 20)
+        prediction['caloriesEstimated'] = max(50, prediction['caloriesEstimated'] + variance)
+        
+        # --- MOCK ACCURACY ---
+        prediction['confidence'] = 0.95
 
-        # 3. Return Results
-        return jsonify({
-            "foodName": food_name_key.replace('_', ' ').title(),
-            "caloriesEstimated": estimated_calories,
-            "macroBreakdown": {
-                "Carbohydrates": estimated_carb,
-                "Protein": estimated_protein,
-                "Fat": estimated_fat
-            },
-            "source": f"Mock CNN based on filename: {filename}"
-        })
+        return jsonify(prediction), 200
 
     except Exception as e:
-        return jsonify({"error": str(e), "message": "Error processing image or model lookup."}), 500
+        print(f"Error during calorie prediction mock: {e}")
+        return jsonify({"message": "Internal Python service error"}), 500
 
 if __name__ == '__main__':
-    # Running on port 5001 (to avoid conflict with risk_service on 5000)
-    app.run(port=5001, debug=False)
+    # Running on port 5001
+    app.run(port=5001, debug=True)

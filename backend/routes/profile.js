@@ -42,7 +42,7 @@ const updateLoginStreak = (profile) => {
 };
 
 
-// @route GET /api/profile (Handles profile fetching and streak calculation)
+// @route GET /api/profile (Handles profile fetching, streak, and risk score aggregation)
 router.get('/', protect, (req, res) => {
     const { profile, id } = req.user;
     const users = loadUsers();
@@ -50,14 +50,29 @@ router.get('/', protect, (req, res) => {
     // 1. UPDATE STREAK
     updateLoginStreak(profile);
 
-    // 2. Save updated profile (with new streak/last_login) to the mock DB
+    // 2. AGGREGATE LATEST RISK SCORE (NEW LOGIC)
+    const logs = loadLogs();
+    const riskLogs = logs.filter(log => log.userId === id && log.type === 'risk_assessment');
+    
+    // Get the risk from the most recent log entry
+    let latestRisk = 'N/A';
+    if (riskLogs.length > 0) {
+        // Sort by date/time (most recent is last)
+        riskLogs.sort((a, b) => new Date(a.date) - new Date(b.date)); 
+        latestRisk = riskLogs[riskLogs.length - 1].risk; // e.g., 'Low', 'Medium', 'High'
+    }
+
+    // Attach the latest risk score directly to the profile object
+    profile.latestRiskScore = latestRisk;
+    
+    // 3. Save updated profile (with new streak/last_login and risk score) to the mock DB
     const userIndex = users.findIndex(u => u.id === id);
     if (userIndex !== -1) {
         users[userIndex].profile = profile;
         saveUsers(users);
     }
 
-    // 3. Return the updated profile
+    // 4. Return the updated profile
     res.json(req.user);
 });
 
@@ -71,18 +86,34 @@ router.post('/', protect, (req, res) => {
 
     // 2. Perform Health Calculations (Only if basic data is present)
     if (profile.height && profile.weight && profile.age) {
-        profile.bmi = calculateBMI(profile.height, profile.weight);
-        profile.bmr = calculateBMR(profile.gender, profile.height, profile.weight, profile.age);
-        profile.tdee = calculateTDEE(profile.bmr, profile.activityLevel);
+        try {
+            profile.bmi = calculateBMI(profile.height, profile.weight);
+            profile.bmr = calculateBMR(profile.gender, profile.height, profile.weight, profile.age);
+            profile.tdee = calculateTDEE(profile.bmr, profile.activityLevel);
 
-        // Calculate Goal-Adjusted Calorie Target (TDEE + goal adjustment)
-        let target = profile.tdee;
-        if (profile.goal === 'lose') {
-            target -= 500;
-        } else if (profile.goal === 'gain') {
-            target += 500;
+            // Check if calculation resulted in a valid number before proceeding
+            if (isNaN(profile.tdee) || profile.tdee === 0) {
+                profile.dailyCalorieTarget = 0;
+                console.error(`ERROR: TDEE calculation resulted in NaN/Zero. Check inputs: BMR=${profile.bmr}, Activity=${profile.activityLevel}`);
+            } else {
+                // Calculate Goal-Adjusted Calorie Target (TDEE + goal adjustment)
+                let target = profile.tdee;
+                if (profile.goal === 'lose') {
+                    target -= 500;
+                } else if (profile.goal === 'gain') {
+                    target += 500;
+                }
+                profile.dailyCalorieTarget = Math.round(target);
+            }
+            
+            // LOG the result for debugging the frontend display
+            console.log(`DEBUG: Calculated Daily Target: ${profile.dailyCalorieTarget} kcal`);
+
+        } catch (e) {
+            console.error("CRITICAL ERROR in Health Calculations:", e.message);
+            profile.dailyCalorieTarget = 0;
+            profile.tdee = 0;
         }
-        profile.dailyCalorieTarget = Math.round(target);
     }
     
     // 3. Ensure streak is updated on POST request as well
@@ -95,6 +126,7 @@ router.post('/', protect, (req, res) => {
     if (userIndex !== -1) {
         users[userIndex].profile = profile;
         saveUsers(users);
+        console.log(`DEBUG: Profile saved for user ${id}. Target: ${profile.dailyCalorieTarget}`); // Final save log
         res.json({ message: "Profile updated successfully, TDEE and streak calculated." });
     } else {
         res.status(404).json({ message: "User not found." });

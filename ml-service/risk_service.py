@@ -7,6 +7,14 @@ import numpy as np
 RISK_MAPPING = {0: 'Low', 1: 'Medium', 2: 'High'}
 MODEL_FILE = 'obesity_risk_model.pkl'
 
+# --- Feature Order Must Match Training Data (11 FEATURES) ---
+FEATURE_ORDER = [
+    'bmi', 'age', 'gender', 'activity_level', 'family_history', 'sleep_time', 
+    'junk_food_freq', 
+    # ADDED THE 4 NEW LIFESTYLE FEATURES:
+    'daily_water_intake', 'veg_fruit_servings', 'processed_meat_freq', 'sugary_drinks_freq' 
+]
+
 app = Flask(__name__)
 CORS(app) 
 
@@ -26,8 +34,9 @@ def predict_risk():
     try:
         data = request.json
         
-        # Ensure feature order matches training:
-        # ['bmi', 'age', 'gender', 'family_history', 'activity_level', 'sleep_time', 'junk_food_freq']
+        # CRITICAL FIX: Extract all 11 features in the correct order.
+        # We use float(data.get(key)) to handle potential missing keys gracefully,
+        # although data validation should ideally prevent missing keys entirely.
         features = [
             float(data.get('bmi')),
             int(data.get('age')),
@@ -35,15 +44,25 @@ def predict_risk():
             int(data.get('family_history')), 
             int(data.get('activity_level')), 
             float(data.get('sleep_time')),
-            int(data.get('junk_food_freq'))
+            int(data.get('junk_food_freq')),
+            
+            # ADDED: Extract the 4 new features
+            float(data.get('daily_water_intake')),
+            int(data.get('veg_fruit_servings')),
+            int(data.get('processed_meat_freq')),
+            int(data.get('sugary_drinks_freq'))
         ]
 
         input_data = np.array([features])
+        
+        # Scikit-learn Warning Fix: Since we use NumPy array, we rely on positional matching
+        # (which is fragile but works if the feature count/order is exact).
         prediction_index = risk_model.predict(input_data)[0]
         probabilities = risk_model.predict_proba(input_data)[0]
         
         predicted_risk = RISK_MAPPING.get(prediction_index, 'Unknown')
         
+        # NOTE: Your probability mapping must match the classes trained (0, 1, 2)
         return jsonify({
             "obesity_risk": predicted_risk,
             "probabilities": {
@@ -55,7 +74,8 @@ def predict_risk():
         })
 
     except Exception as e:
-        return jsonify({"error": str(e), "message": "Invalid input format or missing fields."}), 400
+        # A more detailed error message will now show which field caused the TypeError/KeyError
+        return jsonify({"error": str(e), "message": "Prediction failed. Check that all 11 features are present and valid numbers/integers."}), 400
 
 if __name__ == '__main__':
     # Running on port 5000
