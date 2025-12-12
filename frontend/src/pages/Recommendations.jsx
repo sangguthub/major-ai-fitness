@@ -1,72 +1,101 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import api from '../api/api';
+import { FaRunning, FaAppleAlt, FaBrain, FaSpinner } from 'react-icons/fa';
 
-const Recommendations = ({ profile }) => {
+const Recommendations = ({ profile, user }) => {
     const [recommendations, setRecommendations] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+
+    // Fetch personalized plans from the backend
+    const fetchRecommendations = useCallback(async () => {
+        setLoading(true);
+        setError(null);
+        setRecommendations(null);
+
+        // Required data points for personalized plan generation
+        const { goal, latestRiskScore, dailyCalorieTarget } = profile;
+
+        if (!goal || !dailyCalorieTarget || latestRiskScore === 'N/A') {
+            setError("Failed to fetch recommendations. Ensure profile and risk check are complete (Goal, Target Calories, and latest Risk Score).");
+            setLoading(false);
+            return;
+        }
+
+        try {
+            // CRITICAL FIX: Change to POST method and use the explicit generate route
+            const response = await api.post('/recommendations/generate', {
+                goal,
+                latestRiskScore,
+                dailyCalorieTarget
+            });
+            
+            setRecommendations(response.data.recommendations);
+        } catch (err) {
+            console.error('Error fetching recommendations:', err.response?.data || err);
+            // The console log showed 404 for /api/recommendation; this new log confirms the issue
+            setError(err.response?.data?.message || "Failed to fetch recommendations. Ensure profile and risk check are complete.");
+        } finally {
+            setLoading(false);
+        }
+    }, [profile]);
 
     useEffect(() => {
-        const fetchRecommendations = async () => {
-            try {
-                const response = await api.get('/recommendation');
-                setRecommendations(response.data);
-            } catch (err) {
-                console.error(err);
-                setError(err.response?.data?.message || 'Failed to fetch recommendations. Ensure profile and risk check are complete.');
-            } finally {
-                setLoading(false);
-            }
-        };
+        // Only run fetch if profile data looks ready
+        if (profile.goal && profile.dailyCalorieTarget > 0) {
+            fetchRecommendations();
+        }
+    }, [fetchRecommendations, profile.dailyCalorieTarget, profile.goal]);
 
-        fetchRecommendations();
-    }, [profile.dailyCalorieTarget, profile.bmi, profile.latestRisk]); // Depend on key profile changes
+    if (loading) {
+        return <div className="p-8 text-center text-ai-green"><FaSpinner className="animate-spin inline mr-2" /> Generating personalized plans...</div>;
+    }
 
-    if (loading) return <div className="text-center text-lg mt-10">Generating Personalized Plans...</div>;
-    if (error) return <div className="max-w-4xl mx-auto p-6 text-red-400 border border-red-700 bg-[#1E1E1E] rounded-lg mt-10">{error}</div>;
-    if (!recommendations) return <div className="text-center text-lg mt-10">No recommendations available. Update your profile.</div>;
+    if (error) {
+        return <div className="p-8 text-red-400 border border-red-700 rounded-lg">{error}</div>;
+    }
+    
+    // Check if recommendations were fetched but are empty 
+    if (!recommendations || Object.keys(recommendations).length === 0) {
+        return <div className="p-8 text-gray-500">No specific recommendations available. Please ensure your profile is complete.</div>;
+    }
 
-    const { profileSnapshot, recommendations: plan } = recommendations;
 
     return (
-        <div className="mx-auto">
-            <div className="bg-accent-blue/10 p-4 rounded-lg border-l-4 border-accent-blue mb-6">
-                <p className="text-sm text-accent-blue">Your Goal: <span className="font-bold text-lg capitalize">{plan.goal} Weight</span></p>
-                <p><strong>Daily Calorie Target:</strong> <span className="font-extrabold text-2xl text-ai-green">{plan.dailyCalorieTarget}</span> kcal/day</p>
-                <p className="text-gray-400 text-sm">BMI: {profileSnapshot.bmi} | TDEE: {profileSnapshot.tdee} kcal | Risk: {profileSnapshot.risk || 'N/A'}</p>
+        <div className="space-y-8">
+            <div className="flex items-center space-x-3 text-lg font-medium text-gray-300">
+                <FaBrain className="text-ai-green text-xl" />
+                <p>Generated plans tailored for **{profile.goal?.toUpperCase() || 'MAINTAIN'}** based on your **{profile.latestRiskScore || 'N/A'} Risk** level.</p>
+            </div>
+            
+            {/* Diet Plan Card */}
+            <div className="bg-[#161B22] p-6 rounded-xl border border-ai-green/50 shadow-md">
+                <h3 className="text-2xl font-bold mb-4 text-yellow-400 flex items-center">
+                    <FaAppleAlt className="mr-3" /> Diet Plan (Target: {profile.dailyCalorieTarget} kcal)
+                </h3>
+                <ul className="list-disc ml-6 space-y-2 text-gray-300">
+                    {/* Assuming recommendations.dietPlan is an array of strings */}
+                    {Array.isArray(recommendations.dietPlan) ? (
+                        recommendations.dietPlan.map((item, index) => <li key={index}>{item}</li>)
+                    ) : (
+                        <li>Diet plan details not available in array format.</li>
+                    )}
+                </ul>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                {/* Diet Plan */}
-                <div className="bg-[#1E1E1E] p-5 rounded-lg border border-[#2D333B]">
-                    <h3 className="text-xl font-bold mb-4 text-ai-green">🍎 Diet Plan</h3>
-                    <div className="space-y-3">
-                        <p className="text-gray-400 border-b border-gray-700 pb-2"><strong>Macro Goal (g):</strong> Protein: {plan.macroGoal.protein} | Carb: {plan.macroGoal.carbohydrate} | Fat: {plan.macroGoal.fat}</p>
-                        
-                        {Object.entries(plan.dietPlan).map(([meal, suggestion]) => (
-                            <div key={meal}>
-                                <p className="font-semibold text-white">{meal}:</p>
-                                <p className="text-sm italic ml-2 text-gray-400">{suggestion}</p>
-                            </div>
-                        ))}
-                    </div>
-                    <ul className="list-disc ml-6 mt-4 text-sm text-ai-green space-y-1">
-                        {plan.dietNotes.map((note, index) => <li key={index}>{note}</li>)}
-                    </ul>
-                </div>
-
-                {/* Workout Plan */}
-                <div className="bg-[#1E1E1E] p-5 rounded-lg border border-[#2D333B]">
-                    <h3 className="text-xl font-bold mb-4 text-accent-blue">🏋️ Workout Plan</h3>
-                    <p><strong>Level:</strong> <span className="font-semibold text-lg text-ai-green">{plan.workoutPlan.level}</span></p>
-                    <p><strong>Duration:</strong> {plan.workoutPlan.duration}</p>
-                    <p><strong>Focus:</strong> {plan.workoutPlan.focus}</p>
-                    <ul className="list-disc ml-5 mt-4 space-y-1 text-gray-400">
-                        {plan.workoutPlan.plan.map((step, index) => <li key={index}>{step}</li>)}
-                    </ul>
-                </div>
-
+            {/* Exercise Plan Card */}
+            <div className="bg-[#161B22] p-6 rounded-xl border border-accent-blue/50 shadow-md">
+                <h3 className="text-2xl font-bold mb-4 text-blue-400 flex items-center">
+                    <FaRunning className="mr-3" /> Weekly Exercise Plan
+                </h3>
+                <ul className="list-disc ml-6 space-y-2 text-gray-300">
+                    {/* Assuming recommendations.exercisePlan is an array of strings */}
+                    {Array.isArray(recommendations.exercisePlan) ? (
+                        recommendations.exercisePlan.map((item, index) => <li key={index}>{item}</li>)
+                    ) : (
+                        <li>Exercise plan details not available in array format.</li>
+                    )}
+                </ul>
             </div>
         </div>
     );

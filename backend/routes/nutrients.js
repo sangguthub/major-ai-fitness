@@ -1,12 +1,13 @@
 const express = require('express');
 const { protect } = require('../middleware/auth');
-const { loadLogs } = require('../utils/mockDB');
-const RDI_TARGETS = require('../mock_db/rdi_targets.json'); // Load the RDI data
+const { loadLogs } = require('../utils/dbUtils'); // FIX: Import from dbUtils
+const RDI_TARGETS = require('../mock_db/rdi_targets.json'); // Remains unchanged
 
 const router = express.Router();
 
 // Helper to load RDI based on profile
 const getRDI = (profile) => {
+    // ... (logic remains unchanged)
     const ageGroup = '19-50'; // Simplification
     const activity = profile.activityLevel === 0 ? 'sedentary' : 'active';
     const key = `${profile.gender}_${activity}_${ageGroup}`;
@@ -15,10 +16,16 @@ const getRDI = (profile) => {
 };
 
 // @route GET /api/nutrients/check
-// @desc Analyzes today's nutrient intake against RDI targets
-router.get('/check', protect, (req, res) => {
+router.get('/check', protect, async (req, res) => { // ADD async
     const { profile, id: userId } = req.user;
-    const allLogs = loadLogs().filter(log => log.userId === userId);
+    
+    // FIX: Await MongoDB loadLogs()
+    const allLogs = await loadLogs(userId);
+    
+    // Filter to only include the user's logs
+    // NOTE: loadLogs already filters by userId, so this filter is redundant but harmless.
+    // const allLogs = fullLogs.filter(log => log.userId === userId); 
+    
     const today = new Date().toISOString().split('T')[0];
 
     const RDIs = getRDI(profile);
@@ -27,16 +34,16 @@ router.get('/check', protect, (req, res) => {
     let totalIntake = {
         'Protein (g)': 0,
         'Iron (mg)': 0,
-        'Vitamin D (IU)': 0 // Mocked, as current macro breakdown only has C/P/F
+        'Vitamin D (IU)': 0 
     };
     
+    // FIX: Use async function's result (allLogs)
     allLogs.filter(log => log.type === 'meal_intake' && log.date.startsWith(today))
            .forEach(meal => {
-               // Use the macro data already available in log
-               totalIntake['Protein (g)'] += meal.macroBreakdown.Protein || 0;
+               totalIntake['Protein (g)'] += meal.macroBreakdown.protein || 0; // Fix: use lowercase property name from dbUtils
                // Mocking micro-nutrient data based on total protein for demo purposes
-               totalIntake['Iron (mg)'] += Math.round(meal.macroBreakdown.Protein * 0.1); 
-               totalIntake['Vitamin D (IU)'] += Math.round(meal.macroBreakdown.Protein * 5); 
+               totalIntake['Iron (mg)'] += Math.round((meal.macroBreakdown.protein || 0) * 0.1); 
+               totalIntake['Vitamin D (IU)'] += Math.round((meal.macroBreakdown.protein || 0) * 5); 
            });
            
     let warnings = [];
@@ -46,7 +53,7 @@ router.get('/check', protect, (req, res) => {
         const target = RDIs[nutrient];
         const intake = totalIntake[nutrient];
         
-        if (intake < target * 0.7) { // Warn if intake is less than 70% of RDI
+        if (intake < target * 0.7) { 
             warnings.push({
                 nutrient,
                 target: target,

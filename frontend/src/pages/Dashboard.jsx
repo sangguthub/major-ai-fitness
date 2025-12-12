@@ -3,19 +3,20 @@ import api from '../api/api'; // Assuming you have an api service setup
 import ProfileSummary from '../components/ProfileSummary'; 
 import ProfileForm from '../components/ProfileForm';
 import RiskForm from '../components/RiskForm';
+import Recommendations from '../pages/Recommendations';
+
 import CalorieUpload from '../components/CalorieUpload';
 import ProgressChart from '../components/ProgressChart';
 import NutrientWarning from '../components/NutrientWarning'; // Updated import
-import Recommendations from '../pages/Recommendations';
 
 
 // Systematically ordered menu for the sidebar
 const DASHBOARD_MENU = [
     { id: 'summary', name: '🏠 Dashboard Summary', component: ProfileSummary }, 
     { id: 'profile', name: '👤 Profile & Goal', component: ProfileForm },
+    { id: 'recommendations', name: '🧠 Personalized Plans', component: Recommendations },
     { id: 'risk', name: '❤️ Health Risk Check', component: RiskForm },
     { id: 'calorie', name: '🥗 Calorie Estimation', component: CalorieUpload },
-    { id: 'recommendations', name: '🧠 Personalized Plans', component: Recommendations },
     { id: 'analytics', name: '📊 Daily Analytics', component: ProgressChart },
 ];
 

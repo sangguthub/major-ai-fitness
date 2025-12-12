@@ -1,67 +1,74 @@
 const express = require('express');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const { v4: uuidv4 } = require('uuid');
-const { loadUsers, saveUsers } = require('../utils/mockDB');
-
 const router = express.Router();
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+const { findUser, createUser, updateUser, findUserWithPassword } = require('../utils/dbUtils'); 
 
-const generateToken = (id) => {
-    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '1000d' });
+// --- Helper Functions ---
+const generateJWT = (id, email) => {
+    return jwt.sign({ id, email }, process.env.JWT_SECRET, { expiresIn: '1d' });
 };
 
 // @route POST /api/auth/register
 router.post('/register', async (req, res) => {
-    const { email, password, name } = req.body;
-    // ... (logic from previous response)
-    if (!email || !password || !name) {
-        return res.status(400).json({ message: 'Please enter all fields' });
-    }
-
-    const users = loadUsers();
-    if (users.find(u => u.email === email)) {
+    const { name, email, password } = req.body;
+    
+    const existingUser = await findUser(email); 
+    if (existingUser) {
         return res.status(400).json({ message: 'User already exists' });
     }
 
     const salt = await bcrypt.genSalt(10);
-    const passwordHash = await bcrypt.hash(password, salt);
+    const hashedPassword = await bcrypt.hash(password, salt);
 
     const newUser = {
-        id: uuidv4(),
-        email,
         name,
-        passwordHash,
-        profile: { existingConditions: [] },
-        createdAt: new Date().toISOString()
+        email,
+        password: hashedPassword,
+        profile: {
+            height: 0, weight: 0, age: 0, gender: 'male', activityLevel: 'moderate', goal: 'maintain',
+            dailyCalorieTarget: 0, latestRiskScore: 'N/A', login_streak: 1, last_login: new Date().toISOString(),
+        }
     };
 
-    saveUsers([...users, newUser]);
+    const result = await createUser(newUser); 
 
-    res.status(201).json({
-        id: newUser.id,
-        name: newUser.name,
-        email: newUser.email,
-        token: generateToken(newUser.id),
-    });
-});
-
-// @route POST /api/auth/login
-router.post('/login', async (req, res) => {
-    const { email, password } = req.body;
-    // ... (logic from previous response)
-    const users = loadUsers();
-    const user = users.find(u => u.email === email);
-
-    if (user && (await bcrypt.compare(password, user.passwordHash))) {
-        res.json({
-            id: user.id,
-            name: user.name,
-            email: user.email,
-            profile: user.profile,
-            token: generateToken(user.id),
+    if (result && result.insertedId) {
+        const token = generateJWT(result.insertedId.toString(), email);
+        res.status(201).json({ 
+            token, 
+            id: result.insertedId.toString(),
+            name: newUser.name,
         });
     } else {
-        res.status(400).json({ message: 'Invalid credentials' });
+        res.status(500).json({ message: 'User creation failed.' });
+    }
+});
+
+
+// @route POST /api/auth/login  <-- CRITICAL LOGIN ROUTE
+router.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+
+    const user = await findUser(email); 
+    const userWithPassword = user ? await findUserWithPassword(user._id.toString()) : null;
+
+
+    if (userWithPassword && (await bcrypt.compare(password, userWithPassword.password))) {
+        // Update last_login field in MongoDB
+        const today = new Date().toISOString();
+        await updateUser(userWithPassword._id.toString(), { 'profile.last_login': today });
+        
+        const token = generateJWT(userWithPassword._id.toString(), userWithPassword.email);
+
+        res.json({ 
+            token, 
+            id: userWithPassword._id.toString(),
+            name: userWithPassword.name,
+            profile: userWithPassword.profile
+        });
+    } else {
+        res.status(401).json({ message: 'Invalid credentials' });
     }
 });
 

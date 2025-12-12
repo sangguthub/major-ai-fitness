@@ -1,7 +1,8 @@
 const express = require('express');
 const { protect } = require('../middleware/auth');
-const { loadUsers, saveUsers, loadLogs } = require('../utils/mockDB');
 const { calculateBMR, calculateBMI, calculateTDEE } = require('../utils/healthCalculations');
+// MongoDB Utilities
+const { loadLogs, updateUser } = require('../utils/dbUtils'); 
 
 const router = express.Router();
 
@@ -11,8 +12,10 @@ const updateLoginStreak = (profile) => {
     today.setHours(0, 0, 0, 0); // Start of today
 
     const lastLoginTime = profile.last_login ? new Date(profile.last_login) : null;
-    let newStreak = profile.login_streak || 0;
-
+    
+    // CRITICAL FIX: Declare newStreak before use (Line 15 in old trace)
+    let newStreak = profile.login_streak || 0; 
+    
     if (lastLoginTime) {
         lastLoginTime.setHours(0, 0, 0, 0); // Start of last login day
         const oneDay = 24 * 60 * 60 * 1000;
@@ -34,7 +37,6 @@ const updateLoginStreak = (profile) => {
         newStreak = 1;
     }
 
-    // Update the profile fields
     profile.login_streak = newStreak;
     profile.last_login = today.toISOString(); 
 
@@ -42,94 +44,75 @@ const updateLoginStreak = (profile) => {
 };
 
 
-// @route GET /api/profile (Handles profile fetching, streak, and risk score aggregation)
-router.get('/', protect, (req, res) => {
-    const { profile, id } = req.user;
-    const users = loadUsers();
+// @route GET /api/profile
+// Handles profile fetching, streak update, and risk score aggregation.
+router.get('/', protect, async (req, res) => {
+    let profile = req.user.profile;
+    const userId = req.user.id;
     
     // 1. UPDATE STREAK
-    updateLoginStreak(profile);
+    profile = updateLoginStreak(profile);
 
-    // 2. AGGREGATE LATEST RISK SCORE (NEW LOGIC)
-    const logs = loadLogs();
-    const riskLogs = logs.filter(log => log.userId === id && log.type === 'risk_assessment');
+    // 2. AGGREGATE LATEST RISK SCORE (from MongoDB logs)
+    const logs = await loadLogs(userId); 
+    const riskLogs = logs.filter(log => log.type === 'risk_assessment');
     
-    // Get the risk from the most recent log entry
     let latestRisk = 'N/A';
     if (riskLogs.length > 0) {
         // Sort by date/time (most recent is last)
         riskLogs.sort((a, b) => new Date(a.date) - new Date(b.date)); 
-        latestRisk = riskLogs[riskLogs.length - 1].risk; // e.g., 'Low', 'Medium', 'High'
+        latestRisk = riskLogs[riskLogs.length - 1].risk;
     }
 
-    // Attach the latest risk score directly to the profile object
     profile.latestRiskScore = latestRisk;
     
-    // 3. Save updated profile (with new streak/last_login and risk score) to the mock DB
-    const userIndex = users.findIndex(u => u.id === id);
-    if (userIndex !== -1) {
-        users[userIndex].profile = profile;
-        saveUsers(users);
-    }
+    // 3. Save updated profile (streak/last_login and risk score) to MongoDB
+    const updateResult = await updateUser(userId, { profile: profile }); 
 
-    // 4. Return the updated profile
-    res.json(req.user);
+    if (updateResult) {
+        // Return the full updated user object
+        res.json({ ...req.user, profile: profile });
+    } else {
+        res.status(500).json({ message: "Failed to save profile changes to database." });
+    }
 });
 
-// @route POST /api/profile (Handles profile updates and TDEE calculation)
-router.post('/', protect, (req, res) => {
-    const { profile, id } = req.user;
+// @route POST /api/profile
+// Handles profile updates and TDEE calculation.
+router.post('/', protect, async (req, res) => {
+    let profile = req.user.profile;
+    const userId = req.user.id;
     const updates = req.body;
 
-    // 1. Apply updates to profile
+    // 1. Apply updates
     Object.assign(profile, updates);
 
-    // 2. Perform Health Calculations (Only if basic data is present)
+    // 2. Perform Health Calculations
     if (profile.height && profile.weight && profile.age) {
-        try {
-            profile.bmi = calculateBMI(profile.height, profile.weight);
-            profile.bmr = calculateBMR(profile.gender, profile.height, profile.weight, profile.age);
-            profile.tdee = calculateTDEE(profile.bmr, profile.activityLevel);
+        profile.bmi = calculateBMI(profile.height, profile.weight);
+        profile.bmr = calculateBMR(profile.gender, profile.height, profile.weight, profile.age);
+        profile.tdee = calculateTDEE(profile.bmr, profile.activityLevel);
 
-            // Check if calculation resulted in a valid number before proceeding
-            if (isNaN(profile.tdee) || profile.tdee === 0) {
-                profile.dailyCalorieTarget = 0;
-                console.error(`ERROR: TDEE calculation resulted in NaN/Zero. Check inputs: BMR=${profile.bmr}, Activity=${profile.activityLevel}`);
-            } else {
-                // Calculate Goal-Adjusted Calorie Target (TDEE + goal adjustment)
-                let target = profile.tdee;
-                if (profile.goal === 'lose') {
-                    target -= 500;
-                } else if (profile.goal === 'gain') {
-                    target += 500;
-                }
-                profile.dailyCalorieTarget = Math.round(target);
-            }
-            
-            // LOG the result for debugging the frontend display
-            console.log(`DEBUG: Calculated Daily Target: ${profile.dailyCalorieTarget} kcal`);
-
-        } catch (e) {
-            console.error("CRITICAL ERROR in Health Calculations:", e.message);
-            profile.dailyCalorieTarget = 0;
-            profile.tdee = 0;
+        let target = profile.tdee;
+        if (profile.goal === 'lose') {
+            target -= 500;
+        } else if (profile.goal === 'gain') {
+            target += 500;
         }
+        profile.dailyCalorieTarget = Math.round(target);
+        console.log(`DEBUG: Calculated Daily Target: ${profile.dailyCalorieTarget} kcal`);
     }
     
-    // 3. Ensure streak is updated on POST request as well
-    updateLoginStreak(profile);
+    // 3. Update streak
+    profile = updateLoginStreak(profile);
 
-    // 4. Save updated profile to the mock DB
-    const users = loadUsers();
-    const userIndex = users.findIndex(u => u.id === id);
+    // 4. Save updated profile to MongoDB
+    const updateResult = await updateUser(userId, { profile: profile }); 
 
-    if (userIndex !== -1) {
-        users[userIndex].profile = profile;
-        saveUsers(users);
-        console.log(`DEBUG: Profile saved for user ${id}. Target: ${profile.dailyCalorieTarget}`); // Final save log
+    if (updateResult) {
         res.json({ message: "Profile updated successfully, TDEE and streak calculated." });
     } else {
-        res.status(404).json({ message: "User not found." });
+        res.status(500).json({ message: "Failed to save profile changes to database." });
     }
 });
 

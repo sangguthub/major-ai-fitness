@@ -1,13 +1,15 @@
 const express = require('express');
+const router = express.Router();
 const axios = require('axios');
 const { protect } = require('../middleware/auth');
-const { loadLogs, saveLogs } = require('../utils/mockDB');
+// FIX: Import the new MongoDB function for adding logs
+const { addLog } = require('../utils/dbUtils'); 
 
-const router = express.Router();
+// Assuming RISK_API_URL is defined in .env
 const RISK_API_URL = `${process.env.RISK_API_URL}/predict-risk`;
 
 // @route POST /api/risk/predict
-router.post('/predict', protect, async (req, res) => {
+router.post('/predict', protect, async (req, res) => { // ADD async
     const userId = req.user.id;
     const inputData = req.body; 
 
@@ -19,21 +21,20 @@ router.post('/predict', protect, async (req, res) => {
     }
 
     try {
+        // 1. Call Python ML service
         const response = await axios.post(RISK_API_URL, inputData);
-        
         const predictionResult = response.data;
 
-        // Log the prediction result
-        const logs = loadLogs();
+        // 2. Log the prediction result to MongoDB
         const newRiskLog = {
             userId,
             type: 'risk_assessment',
-            date: new Date().toISOString(),
-            risk: predictionResult.obesity_risk,
+            risk: predictionResult.obesity_risk, // e.g., 'Low', 'Medium', 'High'
             probabilities: predictionResult.probabilities,
             inputParams: inputData
         };
-        saveLogs([...logs, newRiskLog]);
+        // FIX: Use MongoDB addLog
+        await addLog(newRiskLog); 
 
         res.json({ 
             message: "Risk prediction successful and logged.", 

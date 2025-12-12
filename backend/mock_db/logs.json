@@ -13445,5 +13445,68 @@
       "protein": 6
     },
     "imageUrl": "ice_cream.jpg"
+  },
+  {
+    "logId": "meal-1765552467791",
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "meal_intake",
+    "date": "2025-12-12T15:14:27.791Z",
+    "mealType": "Breakfast",
+    "foodName": "Grilled Chicken with Veggies",
+    "caloriesEstimated": 562,
+    "macroBreakdown": {
+      "carbohydrates": 35,
+      "fat": 20,
+      "protein": 45
+    },
+    "imageUrl": "grilled_chicken_plate.jpg"
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-12T15:28:52.749Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 22,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 28,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
+  },
+  {
+    "userId": "52167885-e09b-4872-8717-fe20b38b11be",
+    "type": "risk_assessment",
+    "date": "2025-12-12T15:28:53.773Z",
+    "risk": "Medium",
+    "probabilities": {
+      "High": 1,
+      "Low": 22,
+      "Medium": 77
+    },
+    "inputParams": {
+      "bmi": 24.96,
+      "age": 28,
+      "gender": 0,
+      "activity_level": 1,
+      "family_history": 0,
+      "sleep_time": 7,
+      "junk_food_freq": 1,
+      "daily_water_intake": 2,
+      "veg_fruit_servings": 3,
+      "processed_meat_freq": 1,
+      "sugary_drinks_freq": 1
+    }
   }
 ]

@@ -1,13 +1,15 @@
 const express = require('express');
 const axios = require('axios');
 const { protect } = require('../middleware/auth');
-const { loadLogs, saveLogs } = require('../utils/mockDB');
+// FIX: Import the new MongoDB functions
+const { addLog } = require('../utils/dbUtils'); 
 
 const router = express.Router();
+// Assuming CALORIE_API_URL is defined in .env
 const CALORIE_API_URL = `${process.env.CALORIE_API_URL}/predict-calories`;
 
 // @route POST /api/intake/upload-image
-router.post('/upload-image', protect, async (req, res) => {
+router.post('/upload-image', protect, async (req, res) => { // ADD async
     const userId = req.user.id;
     const { mealType, imageUrl, filename } = req.body; 
 
@@ -22,19 +24,17 @@ router.post('/upload-image', protect, async (req, res) => {
         const mealPrediction = response.data;
 
         // Log the meal result
-        const logs = loadLogs();
         const newMealLog = {
-            logId: `meal-${Date.now()}`,
             userId,
             type: 'meal_intake',
-            date: new Date().toISOString(),
             mealType,
             foodName: mealPrediction.foodName,
             caloriesEstimated: mealPrediction.caloriesEstimated,
             macroBreakdown: mealPrediction.macroBreakdown,
             imageUrl
         };
-        saveLogs([...logs, newMealLog]);
+        // FIX: Use MongoDB addLog
+        await addLog(newMealLog); 
 
         res.json({ 
             message: "Meal estimation successful and logged.", 
