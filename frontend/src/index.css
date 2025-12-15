@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- Color Variables and Accents --- */
+/* --- Color Variables and Accents (PURPLE/MAGENTA THEME) --- */
 
 .bg-card {
     background-color: #161B22; 
@@ -20,17 +20,21 @@ body {
 .bg-sidebar {
     background-color: #161B22; 
 }
-.bg-accent-blue {
-    background-color: #00AEEF; 
+
+/* New Primary Accent Color (Magenta/Vibrant Purple) */
+.bg-accent-purple {
+    background-color: #B100FF; 
 }
-.text-accent-blue {
-    color: #00AEEF; 
+.text-accent-purple {
+    color: #B100FF; 
 }
-.text-ai-green {
-    color: #00FFC0; 
+/* New AI Highlight Color (Vibrant Purple/Neon) */
+.text-ai-purple {
+    color: #9747FF; 
 }
 .shadow-ai {
-    box-shadow: 0 0 12px rgba(0, 174, 239, 0.25), 0 0 5px rgba(0, 174, 239, 0.1); 
+    /* Shadow uses the new primary accent color */
+    box-shadow: 0 0 12px rgba(177, 0, 255, 0.4), 0 0 5px rgba(177, 0, 255, 0.2); 
 }
 
 /* --- Input and Form Styling --- */
@@ -46,8 +50,9 @@ body {
 }
 
 .input:focus, .select:focus {
-    border-color: #00AEEF;
-    box-shadow: 0 0 0 2px rgba(0, 174, 239, 0.4);
+    /* Focus uses the new primary accent color */
+    border-color: #B100FF;
+    box-shadow: 0 0 0 2px rgba(177, 0, 255, 0.4);
     outline: none;
 }
 
@@ -55,7 +60,8 @@ body {
 /* --- Button and Interactive Element Styles --- */
 
 .btn-primary {
-    background-color: #00AEEF;
+    /* Primary button uses the new accent color */
+    background-color: #B100FF;
     color: #FFFFFF;
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
@@ -65,11 +71,12 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #007AC9;
+    background-color: #8D00CC; /* Darker purple on hover */
     transform: translateY(-1px);
 }
 
 .btn-risk {
+    /* Risk button remains high-contrast red */
     background-color: #B91C1C;
     color: #FFFFFF;
     padding: 0.75rem 1.5rem;
@@ -86,18 +93,40 @@ body {
 
 /* Ensure all sidebar buttons have consistent base padding */
 .space-y-3 button {
-    position: relative; /* Essential for pseudo-element positioning */
-    padding-left: 1.1rem; /* Ensure padding matches the active state's required spacing */
+    position: relative; 
+    padding-left: 1.1rem; 
 }
 
-/* Define the pseudo-element for the accent stripe */
+/* Define the pseudo-element for the accent stripe (uses new accent color) */
 .active-accent-border::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    width: 4px; /* Fixed accent thickness */
-    background-color: #00AEEF; /* Bright AI Blue accent */
-    border-radius: 6px 0 0 6px; /* Match button corner radius */
+    width: 4px; 
+    background-color: #B100FF; /* Bright Magenta accent */
+    border-radius: 6px 0 0 6px; 
+}
+
+/* --- GLOBAL LAYOUT SPACING UTILITIES --- */
+/* Added to ensure consistent spacing above the main content and below the footer */
+
+/* Space for fixed top navbar if used */
+.pt-navbar-space {
+    padding-top: 4rem; /* Example: assumes a 4rem (16px) fixed navbar height */
+}
+
+/* Space for fixed bottom footer if used */
+.pb-footer-space {
+    padding-bottom: 4rem; /* Example: reserves space for a footer */
+}
+.app-background-image {
+  background-image: url('./assets/ai_fitness_bg.jpg'); 
+  background-attachment: fixed; /* Keeps the background fixed when scrolling */
+  background-position: center top; 
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-color: #0d111c; /* Fallback for dark theme */
+  min-height: 100vh;
 }

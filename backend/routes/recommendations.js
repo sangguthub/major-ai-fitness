@@ -1,79 +1,89 @@
 const express = require('express');
-const { protect } = require('../middleware/auth');
-const { loadLogs } = require('../utils/dbUtils'); // Use MongoDB loadLogs
-
 const router = express.Router();
+const { protect } = require('../middleware/auth');
+const { findUserWithPassword } = require('../utils/dbUtils'); 
+const { GoogleGenAI } = require('@google/genai'); // Ensure this is installed
 
-// Rule-Based Recommendation Engine (Simplified)
-const generateRecommendation = (userProfile, latestRisk, dailyCalorieTarget) => {
-    const { bmi, dietPreference, activityLevel } = userProfile;
-    const riskLevel = latestRisk || 'Low'; 
+// Initialize the GoogleGenAI client (using the key from .env)
+const ai = new GoogleGenAI(process.env.GEMINI_API_KEY);
+const model = "gemini-2.5-flash"; 
 
-    // --- 1. Set Base Calorie Goal ---
-    const targetCalories = dailyCalorieTarget || 2000; 
-
-    // --- 2. Workout Plan Rules (Simplified Logic) ---
-    let workoutLevel = 'Beginner';
-    // Match logic to expected profile values (e.g., 'high', 'moderate', etc.)
-    if (activityLevel === 'high') workoutLevel = 'Advanced';
-    else if (activityLevel === 'moderate') workoutLevel = 'Intermediate';
-
-    let workoutPlan = [
-        "Warm-up (5 mins)",
-        `Main Workout (${workoutLevel} intensity): ${workoutLevel === 'Beginner' ? 'Walking/Jumping Jacks (20 mins)' : 'Strength training (30 mins)'}`,
-        "Cool-down (5 mins)",
-        `Weekly Focus: ${workoutLevel === 'Beginner' ? 'Consistency' : 'Progressive Overload'}`
-    ];
-
-
-    // --- 3. Diet Plan Rules (Simplified Logic) ---
-    let dietNotes = [];
-    let requiredProtein = Math.round((targetCalories * 0.25) / 4); 
-
-    if (riskLevel === 'High') {
-        dietNotes.push("Focus on high-fiber, low-glycemic foods.");
-    }
-    if (userProfile.goal === 'lose') {
-        dietNotes.push(`Maintain caloric deficit by strictly tracking macros.`);
-    }
-
-    const dietPlan = [
-        `Breakfast: ~${Math.round(targetCalories * 0.2)} kcal. E.g., ${dietPreference === 'veg' ? 'Oats or Poha' : 'Eggs and whole-wheat toast'}`,
-        `Lunch: ~${Math.round(targetCalories * 0.35)} kcal. E.g., Salad + ${dietPreference === 'veg' ? 'Dal and Chapati' : 'Grilled Chicken and Rice'}`,
-        `Dinner: ~${Math.round(targetCalories * 0.35)} kcal. E.g., Light soup and vegetables`,
-        `Daily Protein Goal: ${requiredProtein}g`
-    ];
-
-    return {
-        dailyCalorieTarget: targetCalories,
-        dietPlan: dietPlan,
-        exercisePlan: workoutPlan,
-    };
+// Helper function to format profile data into a readable string
+const formatProfileForAI = (profile) => {
+    if (!profile) return "No profile data available. Generate a general maintenance plan.";
+    
+    return `
+        User Health Snapshot:
+        - Age: ${profile.age || 'N/A'}
+        - Height (m): ${profile.height / 100 || 'N/A'}
+        - Weight (kg): ${profile.weight || 'N/A'}
+        - BMI: ${profile.bmi ? profile.bmi.toFixed(2) : 'N/A'}
+        - Fitness Goal: ${profile.goal || 'maintain'}
+        - Activity Level: ${profile.activityLevel || 'moderate'}
+        - Daily Calorie Target: ${profile.dailyCalorieTarget || 'N/A'} kcal
+        - Latest Risk Score (AI): ${profile.latestRiskScore || 'No score yet'}
+    `;
 };
 
+// @route GET /api/recommendations/plan
+// @desc Generates a full, personalized daily plan using Gemini
+router.get('/plan', protect, async (req, res) => {
+    const userId = req.user.id; 
 
-// @route POST /api/recommendations/generate <-- Frontend POST request lands here
-router.post('/generate', protect, async (req, res) => { 
-    const { profile, id: userId } = req.user;
-    
-    // 1. Get Latest Risk Score (from MongoDB logs)
-    const logs = await loadLogs(userId); 
-    const riskLogs = logs.filter(log => log.type === 'risk_assessment');
-    
-    let latestRisk = profile.latestRiskScore || 'N/A';
-    if (riskLogs.length > 0) {
-        riskLogs.sort((a, b) => new Date(a.date) - new Date(b.date)); 
-        latestRisk = riskLogs[riskLogs.length - 1].risk; 
+    try {
+        // 1. Fetch complete user profile from MongoDB
+        const userWithDetails = await findUserWithPassword(userId);
+        if (!userWithDetails || !userWithDetails.profile) {
+            return res.status(404).json({ message: "User profile not found. Complete your profile first." });
+        }
+        
+        const userProfile = formatProfileForAI(userWithDetails.profile);
+
+        // 2. Define the clear prompt for the AI
+        const prompt = `
+            You are a certified Personal Trainer and Nutritionist. Your task is to generate a comprehensive, personalized **Daily Action Plan** based on the user's data.
+            
+            Current User Data:
+            ${userProfile}
+
+            Generate the plan in three structured sections. The response MUST be a single JSON object.
+
+            1. **Workout:** A 30-minute workout routine tailored to their goal and activity level (e.g., '3 sets of 12 reps').
+            2. **Meal Plan Focus:** A specific, actionable dietary focus for the day (e.g., 'Increase fiber intake to 30g' or 'Focus on lean protein at every meal').
+            3. **Mind/Recovery:** A single, non-exercise related recovery or mental health tip.
+
+            The final output MUST be a JSON object with the keys 'Workout', 'MealPlanFocus', and 'MindRecovery', each containing a string with the detailed advice. Do not include any introductory or explanatory text outside the JSON.
+        `;
+
+        // 3. Call the Gemini API
+        const response = await ai.models.generateContent({
+            model: model,
+            contents: prompt,
+            config: {
+                responseMimeType: "application/json",
+                responseSchema: {
+                    type: "object",
+                    properties: {
+                        Workout: { type: "string", description: "A detailed 30-minute workout routine with sets/reps." },
+                        MealPlanFocus: { type: "string", description: "A specific nutrition goal or plan focus for the day." },
+                        MindRecovery: { type: "string", description: "A tip for recovery, sleep, or mental health." }
+                    },
+                    required: ["Workout", "MealPlanFocus", "MindRecovery"]
+                }
+            }
+        });
+        
+        // 4. Send the structured JSON back to the frontend
+        const plan = JSON.parse(response.text);
+        res.json(plan);
+
+    } catch (error) {
+        console.error('Gemini API Error for Plan:', error.message);
+        res.status(500).json({ 
+            message: "AI Planning service failed to generate a plan.",
+            details: error.message 
+        });
     }
-
-    // 2. Generate plan using current profile data
-    const recommendations = generateRecommendation(profile, latestRisk, profile.dailyCalorieTarget);
-
-    res.json({
-        message: "Personalized recommendations generated based on profile and risk.",
-        profileSnapshot: { bmi: profile.bmi, risk: latestRisk, target: profile.dailyCalorieTarget },
-        recommendations
-    });
 });
 
 module.exports = router;

@@ -9,6 +9,18 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Load Route Modules (Require them synchronously before connecting to DB)
+// NOTE: This assumes models used within routes can handle asynchronous DB connection
+const authRoutes = require('./routes/auth');
+const profileRoutes = require('./routes/profile');
+const riskRoutes = require('./routes/risk');
+const intakeRoutes = require('./routes/intake');
+const analyticsRoutes = require('./routes/analytics');
+const nutrientsRoutes = require('./routes/nutrients');
+const recommendationsRoutes = require('./routes/recommendations');
+const aiRoutes = require('./routes/ai'); 
+
+
 // --- Database Connection and Server Start Logic ---
 connectToDb((err) => {
     if (!err) {
@@ -23,18 +35,20 @@ connectToDb((err) => {
             res.send('AI Fitness API is running...');
         });
         
-        // API Routes
-        app.use('/api/auth', require('./routes/auth'));
-        app.use('/api/profile', require('./routes/profile'));
-        app.use('/api/risk', require('./routes/risk'));
-        app.use('/api/intake', require('./routes/intake'));
-        app.use('/api/analytics', require('./routes/analytics'));
-        app.use('/api/nutrients', require('./routes/nutrients'));
-        
-        // CRITICAL FIX: Ensure consistent plural name is loaded here
-        app.use('/api/recommendations', require('./routes/recommendations')); 
+        // Mount API Routes
+        app.use('/api/auth', authRoutes);
+        app.use('/api/profile', profileRoutes);
+        app.use('/api/risk', riskRoutes);
+        app.use('/api/intake', intakeRoutes);
+        app.use('/api/analytics', analyticsRoutes);
+        app.use('/api/nutrients', nutrientsRoutes);
+        app.use('/api/recommendations', recommendationsRoutes);
+        app.use('/api/ai', aiRoutes); 
 
     } else {
+        console.error("Failed to connect to MongoDB. Error:", err.message);
         console.error("Failed to start server due to database connection error. Check MongoDB connection details in .env file.");
+        // Optional: Exit the process if DB connection fails
+        process.exit(1); 
     }
 });

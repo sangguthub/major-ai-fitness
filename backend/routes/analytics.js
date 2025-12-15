@@ -1,91 +1,163 @@
 const express = require('express');
 const router = express.Router();
-const { protect } = require('../middleware/auth'); 
-const { loadLogs } = require('../utils/dbUtils'); // Using MongoDB loadLogs
+const { protect } = require('../middleware/auth');
+const moment = require('moment'); // Requires: npm install moment
 
-// Helper to aggregate logs over the last 30 days
-const aggregateAnalytics = (logs) => { 
-    const thirtyDaysAgo = new Date();
-    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+// --- Assumed Model Imports ---
+const User = require('../models/User'); 
+const DailyLog = require('../models/DailyLog'); 
+// -----------------------------
 
-    const recentLogs = logs.filter(log => new Date(log.date) >= thirtyDaysAgo);
-
-    const dailyData = recentLogs.reduce((acc, log) => {
-        // Use consistent date format for grouping (MM/DD)
-        const dateKey = new Date(log.date).toLocaleDateString('en-US', { month: '2-digit', day: '2-digit' });
-
-        if (!acc[dateKey]) {
-            // Initialize entry for the day
-            acc[dateKey] = { date: dateKey, calories: 0, weight: null, risk: null };
-        }
-        
-        if (log.type === 'meal_intake') {
-            // Ensure caloriesEstimated is a number
-            acc[dateKey].calories += log.caloriesEstimated || 0;
-        } 
-        
-        // Assuming there is a separate process or log type for explicit weight updates
-        // If your profile update POST route saves a log, it might be called 'profile_update'
-        if (log.type === 'weight_update' && log.weight !== undefined && log.weight !== null) { 
-             acc[dateKey].weight = log.weight;
-        } else if (log.type === 'risk_assessment' && log.risk) {
-            // Take the risk assessment result (e.g., 'Low', 'Medium')
-            acc[dateKey].risk = log.risk;
-        }
-        return acc;
-    }, {});
-
-    const sortedDates = Object.keys(dailyData).sort();
-
-    const analytics = {
-        weightHistory: [],
-        calorieHistory: [],
-        riskHistory: [],
-    };
-    
-    console.log("DEBUG: Daily Aggregated Data (for last 30 days):", dailyData);
-
-    sortedDates.forEach(date => {
-        const day = dailyData[date];
-
-        // Only push if data is meaningful (not null or 0)
-        if (day.weight !== null && day.weight > 0) {
-            analytics.weightHistory.push({ date: day.date, weight: day.weight });
-        }
-        if (day.calories > 0) {
-            analytics.calorieHistory.push({ date: day.date, calories: day.calories });
-        }
-        if (day.risk !== null) {
-            analytics.riskHistory.push({ date: day.date, risk: day.risk }); 
-        }
-    });
-
-    return analytics;
+// Helper: Generates a 30-day timeline array (YYYY-MM-DD)
+const generateTimeline = (days) => {
+    const timeline = [];
+    for (let i = days - 1; i >= 0; i--) {
+        timeline.push(moment().subtract(i, 'days').format('YYYY-MM-DD'));
+    }
+    return timeline;
 };
 
-// @route GET /api/analytics/progress
-router.get('/progress', protect, async (req, res) => { 
-    const userId = req.user.id;
-    
-    try {
-        // 1. Load all relevant logs from MongoDB
-        const allLogs = await loadLogs(userId); 
-        
-        // 2. Aggregate and format for charts
-        const analyticsData = aggregateAnalytics(allLogs);
-        
-        console.log(`DEBUG: Analytics loaded. Weight points: ${analyticsData.weightHistory.length}, Calorie points: ${analyticsData.calorieHistory.length}, Risk points: ${analyticsData.riskHistory.length}`);
+// Helper: Maps a risk string ('Low', 'Medium', 'High') to a numerical score (0 to 1)
+const mapRiskToScore = (riskString) => {
+    if (!riskString) return null;
+    const lowerRisk = riskString.toLowerCase();
+    switch (lowerRisk) {
+        case 'low': return 0.2;
+        case 'medium': return 0.5;
+        case 'high': return 0.8;
+        default: return null;
+    }
+};
 
-        return res.json(analyticsData);
-    } catch (error) {
-        console.error("CRITICAL ERROR: Failed to aggregate analytics data:", error);
-        // Return structured empty data on failure to prevent frontend chart crash
-        return res.status(500).json({ 
-            message: "Failed to load historical analytics data.",
-            weightHistory: [],
-            calorieHistory: [],
-            riskHistory: [],
+// =========================================================================
+// @route GET /api/analytics/history
+// @desc Fetches aggregated time-series data for all analytics charts
+// @access Private
+// =========================================================================
+router.get('/history', protect, async (req, res) => {
+    const userId = req.user.id;
+    const userProfile = req.user.profile;
+    const days = 30;
+    const timeline = generateTimeline(days);
+
+    // Calculate date range for the database query
+    const startDate = moment().subtract(days - 1, 'days').startOf('day').toDate();
+    const endDate = moment().endOf('day').toDate();
+
+    try {
+        // 1. Fetch all relevant logs for the date range
+        const logs = await DailyLog.find({
+            userId: userId,
+            date: { $gte: startDate, $lte: endDate }
+        }).sort({ date: 1 });
+
+        // --- Data Aggregation and Alignment ---
+        
+        // DataMap to hold aggregated values per day (YYYY-MM-DD)
+        const dataMap = new Map();
+        timeline.forEach(date => dataMap.set(date, {
+            intake: 0, protein: 0, carbs: 0, fats: 0, 
+            weight: null, 
+            risk: null
+        }));
+
+        // Process logs to aggregate daily totals and track latest values
+        logs.forEach(log => {
+            const dateKey = moment(log.date).format('YYYY-MM-DD');
+            const dataEntry = dataMap.get(dateKey);
+
+            if (!dataEntry) return;
+
+            if (log.type === 'calorie_intake') {
+                dataEntry.intake += log.calories || 0;
+                dataEntry.protein += log.protein || 0;
+                dataEntry.carbs += log.carbs || 0;
+                dataEntry.fats += log.fats || 0;
+            } else if (log.type === 'risk_assessment') {
+                // Use the latest risk assessment for the day
+                dataEntry.risk = log.risk;
+            } else if (log.type === 'weight_update') {
+                // Use the latest weight logged for the day
+                dataEntry.weight = log.weight; 
+            }
         });
+
+        // 2. Final Time-Series Array Construction (Forward Fill Logic for Weight/Risk)
+        let lastWeight = userProfile.weight || 0;
+        let lastRiskScore = mapRiskToScore(userProfile.latestRiskScore);
+        
+        const aggregatedData = {
+            intake: [], target: [], protein: [], carbs: [], fats: [],
+            weight: [], bmi: [], riskScore: []
+        };
+        
+        // Constants from Profile
+        const heightMeters = (userProfile.height || 170) / 100;
+        const heightSq = heightMeters * heightMeters;
+        const targetCalorie = userProfile.dailyCalorieTarget || 2000;
+        const targetWeight = userProfile.targetWeight || null;
+        
+        timeline.forEach(dateKey => {
+            const entry = dataMap.get(dateKey);
+
+            // --- Calorie Data ---
+            aggregatedData.intake.push(entry.intake || null); 
+            aggregatedData.target.push(targetCalorie); 
+            aggregatedData.protein.push(entry.protein || null);
+            aggregatedData.carbs.push(entry.carbs || null);
+            aggregatedData.fats.push(entry.fats || null);
+
+            // --- Weight Data (Forward Fill) ---
+            // If entry.weight is present, use it; otherwise, use the last known weight.
+            const currentWeight = entry.weight > 0 ? entry.weight : lastWeight;
+            
+            // Push weight, but only if height is known (to calculate BMI)
+            if (currentWeight > 0) {
+                aggregatedData.weight.push(currentWeight);
+                // Calculate BMI
+                aggregatedData.bmi.push((currentWeight / heightSq).toFixed(2)); 
+                lastWeight = currentWeight; // Update last known weight
+            } else {
+                aggregatedData.weight.push(null);
+                aggregatedData.bmi.push(null);
+            }
+
+            // --- Risk Data (Forward Fill) ---
+            const currentRiskScore = mapRiskToScore(entry.risk) || lastRiskScore;
+            aggregatedData.riskScore.push(currentRiskScore);
+            lastRiskScore = currentRiskScore;
+        });
+        
+        // 3. Assemble the final structured response
+        const responseData = {
+            timeline: timeline,
+            calorieData: {
+                intake: aggregatedData.intake.map(v => v === 0 ? null : v), // Ensure 0s are rendered as gaps
+                target: aggregatedData.target,
+                protein: aggregatedData.protein,
+                carbs: aggregatedData.carbs,
+                fats: aggregatedData.fats,
+            },
+            bodyData: {
+                weight: aggregatedData.weight.map(v => v === 0 ? null : v),
+                bmi: aggregatedData.bmi.map(v => v === 0 ? null : v),
+                goalWeight: targetWeight
+            },
+            riskData: {
+                riskScore: aggregatedData.riskScore,
+                // Leaving lifestyleActions as an empty array unless you build a dedicated feature to log these
+                lifestyleActions: [] 
+            }
+        };
+
+        res.json({
+            message: "Comprehensive analytics history fetched successfully.",
+            data: responseData
+        });
+
+    } catch (error) {
+        console.error('Error fetching analytics history:', error);
+        res.status(500).json({ message: "Failed to load analytics history.", details: error.message });
     }
 });
 

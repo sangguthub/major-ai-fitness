@@ -1,102 +1,104 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import api from '../api/api';
-import { FaRunning, FaAppleAlt, FaBrain, FaSpinner } from 'react-icons/fa';
+import { FaDumbbell, FaAppleAlt, FaSpa, FaSyncAlt, FaSpinner } from 'react-icons/fa';
 
-const Recommendations = ({ profile, user }) => {
-    const [recommendations, setRecommendations] = useState(null);
+const Recommendations = ({ profile }) => {
+    const [plan, setPlan] = useState(null);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState('');
+    const [timestamp, setTimestamp] = useState(null);
+    // State to show initial instructions instead of attempting to load on mount
+    const [initialLoadAttempted, setInitialLoadAttempted] = useState(false); 
 
-    // Fetch personalized plans from the backend
-    const fetchRecommendations = useCallback(async () => {
+    const fetchPlan = async () => {
         setLoading(true);
-        setError(null);
-        setRecommendations(null);
+        setError('');
+        
+        // Mark that the initial load has been attempted
+        if (!initialLoadAttempted) setInitialLoadAttempted(true);
 
-        // Required data points for personalized plan generation
-        const { goal, latestRiskScore, dailyCalorieTarget } = profile;
-
-        if (!goal || !dailyCalorieTarget || latestRiskScore === 'N/A') {
-            setError("Failed to fetch recommendations. Ensure profile and risk check are complete (Goal, Target Calories, and latest Risk Score).");
+        if (!profile.age || !profile.bmi || !profile.goal) {
+            setPlan(null);
+            setError("Please complete your Age, BMI, and Fitness Goal in the Profile module before generating a plan.");
             setLoading(false);
             return;
         }
 
         try {
-            // CRITICAL FIX: Change to POST method and use the explicit generate route
-            const response = await api.post('/recommendations/generate', {
-                goal,
-                latestRiskScore,
-                dailyCalorieTarget
-            });
-            
-            setRecommendations(response.data.recommendations);
+            const response = await api.get('/recommendations/plan'); 
+            setPlan(response.data);
+            setTimestamp(new Date().toLocaleTimeString());
         } catch (err) {
-            console.error('Error fetching recommendations:', err.response?.data || err);
-            // The console log showed 404 for /api/recommendation; this new log confirms the issue
-            setError(err.response?.data?.message || "Failed to fetch recommendations. Ensure profile and risk check are complete.");
+            console.error('Failed to fetch personalized plan:', err.response?.data);
+            setError(err.response?.data?.message || 'AI Planning service is unavailable. Check backend/Gemini key.');
         } finally {
             setLoading(false);
         }
-    }, [profile]);
+    };
 
-    useEffect(() => {
-        // Only run fetch if profile data looks ready
-        if (profile.goal && profile.dailyCalorieTarget > 0) {
-            fetchRecommendations();
-        }
-    }, [fetchRecommendations, profile.dailyCalorieTarget, profile.goal]);
+    // REMOVED: useEffect(() => { fetchPlan(); }, [profile.age, profile.bmi, profile.goal]); 
+    // The component will now load empty, waiting for the user to click the button.
 
-    if (loading) {
-        return <div className="p-8 text-center text-ai-green"><FaSpinner className="animate-spin inline mr-2" /> Generating personalized plans...</div>;
-    }
-
-    if (error) {
-        return <div className="p-8 text-red-400 border border-red-700 rounded-lg">{error}</div>;
-    }
-    
-    // Check if recommendations were fetched but are empty 
-    if (!recommendations || Object.keys(recommendations).length === 0) {
-        return <div className="p-8 text-gray-500">No specific recommendations available. Please ensure your profile is complete.</div>;
-    }
-
+    const planSections = plan ? [
+        { title: 'Workout Focus', data: plan.Workout, icon: <FaDumbbell className="text-4xl text-accent-purple" /> },
+        { title: 'Meal Plan Focus', data: plan.MealPlanFocus, icon: <FaAppleAlt className="text-4xl text-green-400" /> },
+        { title: 'Mind & Recovery', data: plan.MindRecovery, icon: <FaSpa className="text-4xl text-yellow-400" /> },
+    ] : [];
 
     return (
         <div className="space-y-8">
-            <div className="flex items-center space-x-3 text-lg font-medium text-gray-300">
-                <FaBrain className="text-ai-green text-xl" />
-                <p>Generated plans tailored for **{profile.goal?.toUpperCase() || 'MAINTAIN'}** based on your **{profile.latestRiskScore || 'N/A'} Risk** level.</p>
-            </div>
-            
-            {/* Diet Plan Card */}
-            <div className="bg-[#161B22] p-6 rounded-xl border border-ai-green/50 shadow-md">
-                <h3 className="text-2xl font-bold mb-4 text-yellow-400 flex items-center">
-                    <FaAppleAlt className="mr-3" /> Diet Plan (Target: {profile.dailyCalorieTarget} kcal)
-                </h3>
-                <ul className="list-disc ml-6 space-y-2 text-gray-300">
-                    {/* Assuming recommendations.dietPlan is an array of strings */}
-                    {Array.isArray(recommendations.dietPlan) ? (
-                        recommendations.dietPlan.map((item, index) => <li key={index}>{item}</li>)
-                    ) : (
-                        <li>Diet plan details not available in array format.</li>
-                    )}
-                </ul>
+            <div className="flex justify-between items-center pb-4 border-b border-gray-700">
+                <p className="text-gray-400 text-md">
+                    Your **Daily Action Plan** is synthesized by Gemini based on your current stats, goals, and risk profile.
+                </p>
+                <button
+                    onClick={fetchPlan}
+                    disabled={loading || error.includes('Please complete')}
+                    className="p-3 bg-accent-purple/20 text-accent-purple rounded-lg hover:bg-accent-purple/40 transition-colors disabled:opacity-50 flex items-center space-x-2"
+                >
+                    <FaSyncAlt className={loading ? 'animate-spin' : ''} />
+                    <span className="hidden sm:inline">{loading ? 'Generating...' : 'Regenerate Plan'}</span>
+                </button>
             </div>
 
-            {/* Exercise Plan Card */}
-            <div className="bg-[#161B22] p-6 rounded-xl border border-accent-blue/50 shadow-md">
-                <h3 className="text-2xl font-bold mb-4 text-blue-400 flex items-center">
-                    <FaRunning className="mr-3" /> Weekly Exercise Plan
-                </h3>
-                <ul className="list-disc ml-6 space-y-2 text-gray-300">
-                    {/* Assuming recommendations.exercisePlan is an array of strings */}
-                    {Array.isArray(recommendations.exercisePlan) ? (
-                        recommendations.exercisePlan.map((item, index) => <li key={index}>{item}</li>)
-                    ) : (
-                        <li>Exercise plan details not available in array format.</li>
-                    )}
-                </ul>
-            </div>
+            {loading && (
+                <div className="text-center py-12 text-accent-purple flex items-center justify-center space-x-2">
+                    <FaSpinner className="animate-spin" />
+                    <span>Analyzing profile and structuring your personalized plan...</span>
+                </div>
+            )}
+
+            {error && (
+                <div className="text-center py-12 text-red-400 border border-red-500/30 bg-red-900/10 rounded-xl p-6">
+                    <h3 className="font-semibold text-xl mb-2">Plan Generation Error</h3>
+                    <p>{error}</p>
+                </div>
+            )}
+            
+            {/* Initial empty state or instructions */}
+            {!loading && planSections.length === 0 && !error && !initialLoadAttempted && (
+                <div className="text-center py-12 text-gray-500 border border-dashed border-gray-700 p-8 rounded-lg">
+                    Click the **Regenerate Plan** button to analyze your profile and generate your first personalized plan.
+                </div>
+            )}
+            
+            {planSections.length > 0 && (
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    {planSections.map((section, index) => (
+                        <div
+                            key={index}
+                            className="p-6 bg-card rounded-2xl shadow-xl border border-slate-700/50 transition-transform hover:scale-[1.01]"
+                        >
+                            <div className="flex items-center space-x-4 mb-4">
+                                {section.icon}
+                                <h3 className="text-xl font-bold text-white">{section.title}</h3>
+                            </div>
+                            <div className="h-1 w-1/3 bg-accent-purple rounded-full mb-4"></div>
+                            <p className="text-gray-300 whitespace-pre-wrap">{section.data}</p>
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };
