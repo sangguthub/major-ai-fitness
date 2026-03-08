@@ -7,14 +7,12 @@ const MaintenanceCoach = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const [timestamp, setTimestamp] = useState(null);
-    // State to track if the initial load has been attempted (to show the initial prompt)
     const [initialLoadAttempted, setInitialLoadAttempted] = useState(false); 
 
     const fetchAdvice = async () => {
         setLoading(true);
         setError('');
         
-        // Mark that the initial load has been attempted
         if (!initialLoadAttempted) setInitialLoadAttempted(true);
 
         try {
@@ -29,68 +27,150 @@ const MaintenanceCoach = () => {
         }
     };
 
-    // REMOVED: useEffect(() => { fetchAdvice(); }, []); 
-    // The component will now load empty, waiting for the user to click the button.
-
     const getCategoryClasses = (category) => {
         if (category.includes('Daily')) return {
-            border: 'border-accent-purple/50', 
-            text: 'text-accent-purple' 
+            border: 'border-purple-500/40', 
+            text: 'text-purple-400',
+            bg: 'from-purple-600/20 to-indigo-600/20',
+            glow: 'hover:shadow-purple-500/20'
         };
         if (category.includes('Dietary')) return {
-            border: 'border-green-500/50', 
-            text: 'text-green-400' 
+            border: 'border-emerald-500/40', 
+            text: 'text-emerald-400',
+            bg: 'from-emerald-600/20 to-teal-600/20',
+            glow: 'hover:shadow-emerald-500/20'
         };
         return {
-            border: 'border-yellow-500/50', 
-            text: 'text-yellow-400' 
+            border: 'border-amber-500/40', 
+            text: 'text-amber-400',
+            bg: 'from-amber-600/20 to-orange-600/20',
+            glow: 'hover:shadow-amber-500/20'
         };
     };
 
     return (
-        <div className="space-y-6">
-            <div className="flex justify-between items-center border-b border-gray-700 pb-2">
-                <h2 className="text-2xl font-bold text-ai-purple flex items-center space-x-2">
-                    <FaRobot />
-                    <span>AI Maintenance Coach</span>
-                </h2>
-                <div className="flex items-center space-x-3">
-                    {timestamp && <span className="text-xs text-gray-500 hidden sm:block">Last update: {timestamp}</span>}
-                    <button
-                        onClick={fetchAdvice}
-                        disabled={loading}
-                        className="p-3 bg-accent-purple/20 text-accent-purple rounded-lg hover:bg-accent-purple/40 transition-colors disabled:opacity-50 flex items-center space-x-2"
-                        title="Generate New Advice"
-                    >
-                        <FaSyncAlt className={loading ? 'animate-spin' : ''} />
-                        <span className="hidden sm:inline">{loading ? 'Generating...' : 'Regenerate Tips'}</span>
-                    </button>
+        <div className="space-y-8">
+            {/* Modern Header */}
+            <div className="relative overflow-hidden rounded-2xl backdrop-blur-xl bg-slate-900/40 border border-slate-800/50 p-6 shadow-xl">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500"></div>
+                
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    {/* Title Section */}
+                    <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center shadow-lg shadow-purple-500/30">
+                            <FaRobot className="text-2xl text-white" />
+                        </div>
+                        <div>
+                            <h2 className="text-3xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                                AI Maintenance Coach
+                            </h2>
+                            <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-1"></div>
+                        </div>
+                    </div>
+                    
+                    {/* Action Section */}
+                    <div className="flex items-center gap-3">
+                        {timestamp && (
+                            <span className="text-xs text-slate-400 px-3 py-1.5 rounded-lg bg-slate-800/50 border border-slate-700/50 hidden sm:block">
+                                Last update: {timestamp}
+                            </span>
+                        )}
+                        <button
+                            onClick={fetchAdvice}
+                            
+                            disabled={loading}
+                            className="group relative overflow-hidden px-5 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:hover:scale-100 shadow-lg hover:shadow-purple-500/50 flex items-center gap-2"
+                        >
+                            {/* Shine effect */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+                            
+                            <FaSyncAlt className={`relative z-10 ${loading ? 'animate-spin' : 'group-hover:rotate-180 transition-transform duration-500'}`} />
+                            <span className="relative z-10 hidden sm:inline">
+                                {loading ? 'Generating...' : 'Regenerate Tips'}
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
+            {/* Loading State */}
             {loading && (
-                <div className="text-center py-8 text-accent-purple flex items-center justify-center space-x-2">
-                    <FaSpinner className="animate-spin" />
-                    <span>Generating hyper-personalized suggestions...</span>
+                <div className="relative overflow-hidden rounded-2xl backdrop-blur-xl bg-slate-900/40 border border-slate-800/50 p-12 shadow-xl">
+                    <div className="flex flex-col items-center justify-center gap-6">
+                        <div className="relative">
+                            {/* Outer spinning ring */}
+                            <div className="w-20 h-20 rounded-full border-4 border-slate-800 border-t-purple-500 animate-spin"></div>
+                            {/* Inner pulsing circle */}
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 animate-pulse"></div>
+                            </div>
+                            {/* Center icon */}
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <FaRobot className="text-2xl text-white" />
+                            </div>
+                        </div>
+                        
+                        <div className="text-center">
+                            <p className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+                                Generating hyper-personalized suggestions...
+                            </p>
+                            <div className="flex items-center justify-center gap-1">
+                                <div className="w-2 h-2 rounded-full bg-purple-500 animate-bounce" style={{animationDelay: '0s'}}></div>
+                                <div className="w-2 h-2 rounded-full bg-pink-500 animate-bounce" style={{animationDelay: '0.1s'}}></div>
+                                <div className="w-2 h-2 rounded-full bg-rose-500 animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {/* Background glow */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
                 </div>
             )}
 
-            {error && <p className="text-center text-red-400 py-4">{error}</p>}
+            {/* Error State */}
+            {error && (
+                <div className="relative overflow-hidden rounded-2xl backdrop-blur-xl bg-red-900/30 border border-red-500/40 p-6 shadow-xl">
+                    <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-red-500/20 border border-red-500/40 flex items-center justify-center flex-shrink-0">
+                            <span className="text-2xl">⚠️</span>
+                        </div>
+                        <p className="text-red-400">{error}</p>
+                    </div>
+                </div>
+            )}
 
-            {/* Initial empty state or instructions */}
+            {/* Initial Empty State - Before First Load */}
             {!loading && suggestions.length === 0 && !error && !initialLoadAttempted && (
-                 <div className="text-center py-8 text-gray-500 border border-dashed border-gray-700 p-8 rounded-lg">
-                    Click the **Regenerate Tips** button to start the AI Coach and receive your first set of personalized tips.
+                <div className="relative overflow-hidden rounded-2xl backdrop-blur-xl bg-slate-900/40 border-2 border-dashed border-slate-700/50 p-12 shadow-xl text-center">
+                    <div className="relative z-10">
+                        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-600/20 border-2 border-purple-500/30 flex items-center justify-center mx-auto mb-6">
+                            <FaRobot className="text-4xl text-purple-400" />
+                        </div>
+                        <h3 className="text-xl font-bold text-slate-300 mb-3">Ready to Get Started?</h3>
+                        <p className="text-slate-400 max-w-md mx-auto">
+                            Click the <span className="font-semibold text-purple-400">Regenerate Tips</span> button to start the AI Coach and receive your first set of personalized tips.
+                        </p>
+                    </div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl"></div>
                 </div>
             )}
             
+            {/* Empty State - After Load Attempt */}
             {!loading && suggestions.length === 0 && !error && initialLoadAttempted && (
-                 <div className="text-center py-8 text-gray-500 border border-dashed border-gray-700 p-8 rounded-lg">
-                    No personalized tips were returned. Try again or check the backend logs.
+                <div className="relative overflow-hidden rounded-2xl backdrop-blur-xl bg-slate-900/40 border-2 border-dashed border-slate-700/50 p-12 shadow-xl text-center">
+                    <div className="relative z-10">
+                        <div className="w-20 h-20 rounded-full bg-amber-500/20 border-2 border-amber-500/30 flex items-center justify-center mx-auto mb-6">
+                            <span className="text-4xl">🤔</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-slate-300 mb-3">No Tips Available</h3>
+                        <p className="text-slate-400 max-w-md mx-auto">
+                            No personalized tips were returned. Try again or check the backend logs.
+                        </p>
+                    </div>
                 </div>
             )}
 
-
+            {/* Suggestions Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {suggestions.map((tip, index) => {
                     const classes = getCategoryClasses(tip.category);
@@ -98,13 +178,29 @@ const MaintenanceCoach = () => {
                     return (
                         <div
                             key={index}
-                            className={`p-5 bg-card rounded-xl shadow-lg border ${classes.border} transition-transform hover:scale-[1.02]`}
+                            className={`group relative overflow-hidden p-6 rounded-2xl backdrop-blur-xl bg-gradient-to-br ${classes.bg} border ${classes.border} shadow-xl transition-all duration-300 hover:scale-105 ${classes.glow}`}
                         >
-                            <div className={`text-4xl mb-3 ${classes.text}`}>
-                                {tip.icon}
+                            {/* Gradient overlay on hover */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            
+                            <div className="relative z-10">
+                                {/* Icon Badge */}
+                                <div className={`w-16 h-16 rounded-2xl bg-slate-800/50 border ${classes.border} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                                    <div className={`text-4xl ${classes.text}`}>
+                                        {tip.icon}
+                                    </div>
+                                </div>
+                                
+                                {/* Category */}
+                                <h4 className={`font-bold text-lg mb-3 ${classes.text}`}>
+                                    {tip.category}
+                                </h4>
+                                
+                                {/* Tip Content */}
+                                <p className="text-sm text-slate-300 leading-relaxed">
+                                    {tip.tip}
+                                </p>
                             </div>
-                            <h4 className="font-semibold text-lg mb-2 text-white">{tip.category}</h4>
-                            <p className="text-sm text-gray-400">{tip.tip}</p>
                         </div>
                     );
                 })}

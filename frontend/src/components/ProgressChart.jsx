@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import api from '../api/api';
-import Chart from 'chart.js/auto'; // Ensure Chart.js is installed
+import Chart from 'chart.js/auto';
 import { FaFire, FaWeight, FaHeartbeat, FaSpinner, FaChartLine } from 'react-icons/fa';
 
 // Helper function to destroy old charts and create new ones
@@ -39,8 +39,7 @@ const ProgressChart = ({ profile }) => {
         fetchHistory();
     }, [fetchHistory]);
 
-
-    // --- CHART RENDERING LOGIC ---
+    // Chart Rendering Logic
     useEffect(() => {
         if (!history) return;
 
@@ -56,7 +55,7 @@ const ProgressChart = ({ profile }) => {
         };
         const textDefault = '#CBD5E1'; // Slate-300
         
-        // --- 1. Calorie & Goal Adherence Chart ---
+        // 1. Calorie & Goal Adherence Chart
         if (calorieChartRef.current) {
             createChart(calorieChartRef.current, 'line', {
                 labels: timeline,
@@ -118,14 +117,14 @@ const ProgressChart = ({ profile }) => {
                         position: 'right',
                         title: { display: true, text: 'Macros (g)', color: themeColors.protein },
                         ticks: { color: themeColors.protein },
-                        grid: { drawOnChartArea: false } // Only draw grid lines for the left axis
+                        grid: { drawOnChartArea: false }
                     }
                 },
                 plugins: { legend: { labels: { color: textDefault } } }
             });
         }
 
-        // --- 2. Body Composition Trend Chart ---
+        // 2. Body Composition Trend Chart
         if (bodyChartRef.current) {
             createChart(bodyChartRef.current, 'line', {
                 labels: timeline,
@@ -176,7 +175,7 @@ const ProgressChart = ({ profile }) => {
             });
         }
 
-        // --- 3. AI Risk Score Trend Chart ---
+        // 3. AI Risk Score Trend Chart
         if (riskChartRef.current) {
             createChart(riskChartRef.current, 'line', {
                 labels: timeline,
@@ -184,7 +183,7 @@ const ProgressChart = ({ profile }) => {
                     {
                         label: 'AI Risk Score (0 - 1)',
                         data: history.riskData.riskScore,
-                        backgroundColor: 'rgba(129, 140, 248, 0.3)', // Indigo
+                        backgroundColor: 'rgba(129, 140, 248, 0.3)',
                         borderColor: 'rgb(129, 140, 248)', 
                         tension: 0.4,
                         fill: 'origin',
@@ -209,7 +208,6 @@ const ProgressChart = ({ profile }) => {
                     tooltip: {
                         callbacks: {
                             afterBody: function(context) {
-                                // Add lifestyle actions to the tooltip for the date
                                 const date = context[0].label;
                                 const action = history.riskData.lifestyleActions.find(a => new Date(a.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) === date);
                                 return action ? `\nAction: ${action.description}` : '';
@@ -221,47 +219,115 @@ const ProgressChart = ({ profile }) => {
         }
     }, [history, profile]);
 
-
     if (loading) {
-        return <div className="text-center py-12 text-emerald-400"><FaSpinner className="animate-spin inline-block mr-2" /> Loading detailed analytics...</div>;
+        return (
+            <div className="relative overflow-hidden rounded-2xl backdrop-blur-xl bg-slate-900/40 border border-slate-800/50 p-12 shadow-xl">
+                <div className="flex flex-col items-center justify-center gap-6">
+                    <div className="relative">
+                        <div className="w-20 h-20 rounded-full border-4 border-slate-800 border-t-emerald-500 animate-spin"></div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 animate-pulse"></div>
+                        </div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <FaChartLine className="text-2xl text-white" />
+                        </div>
+                    </div>
+                    
+                    <div className="text-center">
+                        <p className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent mb-2">
+                            Loading detailed analytics...
+                        </p>
+                        <div className="flex items-center justify-center gap-1">
+                            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-bounce" style={{animationDelay: '0s'}}></div>
+                            <div className="w-2 h-2 rounded-full bg-teal-500 animate-bounce" style={{animationDelay: '0.1s'}}></div>
+                            <div className="w-2 h-2 rounded-full bg-cyan-500 animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                        </div>
+                    </div>
+                </div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+            </div>
+        );
     }
 
     if (error || !history) {
-        return <div className="text-center py-12 text-red-400">{error || "No sufficient historical data available."}</div>;
+        return (
+            <div className="relative overflow-hidden rounded-2xl backdrop-blur-xl bg-red-900/30 border border-red-500/40 p-8 shadow-xl text-center">
+                <div className="relative z-10">
+                    <div className="w-20 h-20 rounded-full bg-red-500/20 border-2 border-red-500/40 flex items-center justify-center mx-auto mb-4">
+                        <span className="text-4xl">⚠️</span>
+                    </div>
+                    <p className="text-red-400 max-w-md mx-auto">{error || "No sufficient historical data available."}</p>
+                </div>
+            </div>
+        );
     }
 
     return (
-        <div className="space-y-12 text-white">
+        <div className="space-y-8">
             
             {/* 1. Calorie & Goal Adherence */}
-            <div className="rounded-xl p-6 bg-slate-900/40 border border-slate-700/50 shadow-lg">
-                <h3 className="text-2xl font-bold mb-4 flex items-center gap-3 text-emerald-400">
-                    <FaFire /> Calorie & Macro Adherence
-                </h3>
-                <div className="h-96">
+            <div className="group relative overflow-hidden rounded-2xl backdrop-blur-xl bg-slate-900/40 border border-slate-800/50 p-6 shadow-xl transition-all duration-300 hover:shadow-emerald-500/10">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+                
+                <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-600/20 border border-emerald-500/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <FaFire className="text-2xl text-emerald-400" />
+                    </div>
+                    <div>
+                        <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+                            Calorie & Macro Adherence
+                        </h3>
+                        <div className="h-1 w-32 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mt-1"></div>
+                    </div>
+                </div>
+                
+                <div className="h-96 p-4 rounded-xl bg-slate-950/50 border border-slate-800/30">
                     <canvas ref={calorieChartRef}></canvas>
                 </div>
             </div>
 
             {/* 2. Body Composition Trend */}
-            <div className="rounded-xl p-6 bg-slate-900/40 border border-slate-700/50 shadow-lg">
-                <h3 className="text-2xl font-bold mb-4 flex items-center gap-3 text-teal-400">
-                    <FaWeight /> Weight & BMI Progression
-                </h3>
-                <div className="h-96">
+            <div className="group relative overflow-hidden rounded-2xl backdrop-blur-xl bg-slate-900/40 border border-slate-800/50 p-6 shadow-xl transition-all duration-300 hover:shadow-teal-500/10">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 to-cyan-500"></div>
+                
+                <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500/20 to-cyan-600/20 border border-teal-500/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <FaWeight className="text-2xl text-teal-400" />
+                    </div>
+                    <div>
+                        <h3 className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+                            Weight & BMI Progression
+                        </h3>
+                        <div className="h-1 w-32 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full mt-1"></div>
+                    </div>
+                </div>
+                
+                <div className="h-96 p-4 rounded-xl bg-slate-950/50 border border-slate-800/30">
                     <canvas ref={bodyChartRef}></canvas>
                 </div>
             </div>
 
             {/* 3. AI Health Risk Score Trend */}
-            <div className="rounded-xl p-6 bg-slate-900/40 border border-slate-700/50 shadow-lg">
-                <h3 className="text-2xl font-bold mb-4 flex items-center gap-3 text-indigo-400">
-                    <FaHeartbeat /> Predictive AI Risk Score Trend
-                </h3>
-                <p className="text-slate-400 mb-4 text-sm">
+            <div className="group relative overflow-hidden rounded-2xl backdrop-blur-xl bg-slate-900/40 border border-slate-800/50 p-6 shadow-xl transition-all duration-300 hover:shadow-indigo-500/10">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
+                
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-600/20 border border-indigo-500/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <FaHeartbeat className="text-2xl text-indigo-400" />
+                    </div>
+                    <div>
+                        <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                            Predictive AI Risk Score Trend
+                        </h3>
+                        <div className="h-1 w-32 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mt-1"></div>
+                    </div>
+                </div>
+                
+                <p className="text-slate-400 mb-4 text-sm px-4">
                     This chart tracks your predicted metabolic risk based on logged data and lifestyle factors. Lower scores are better.
                 </p>
-                <div className="h-96">
+                
+                <div className="h-96 p-4 rounded-xl bg-slate-950/50 border border-slate-800/30">
                     <canvas ref={riskChartRef}></canvas>
                 </div>
             </div>

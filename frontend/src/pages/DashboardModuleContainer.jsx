@@ -96,7 +96,7 @@ const DashboardModuleContainer = ({ profile, setProfile, fetchProfile, user }) =
     };
 
     return (
-        <div className="flex min-h-[calc(100vh-68px)] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+        <div className="flex min-h-[calc(100vh-68px)] ">
             
             {/* Modern Sidebar with Glassmorphism */}
             <div className="w-72 backdrop-blur-xl bg-slate-900/40 border-r border-slate-800/50 shadow-2xl flex flex-col relative">
