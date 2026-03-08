@@ -24,6 +24,9 @@
       "react-app/jest"
     ]
   },
+  "engines": {
+    "node": "18.x"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -35,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
