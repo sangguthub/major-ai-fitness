@@ -13,11 +13,13 @@ import MaintenanceCoach from '../components/MaintenanceCoach';
 const DASHBOARD_MENU = [
     // Removed 'summary' since DashboardHubPage now handles the summary view
     { id: 'profile', name: 'Profile & Goal', icon: '👤', component: ProfileForm, path: '/app/profile' },
+        { id: 'recommendations', name: 'Personalized Plans', icon: '🧠', component: Recommendations, path: '/app/recommendations' },
+     { id: 'coach', name: 'AI Maintenance Coach', icon: '🤖', component: MaintenanceCoach, path: '/app/coach' },
+
     { id: 'risk', name: 'Health Risk Check', icon: '❤️', component: RiskForm, path: '/app/risk' },
     { id: 'calorie', name: 'Calorie Estimation', icon: '🥗', component: CalorieUpload, path: '/app/calorie' },
     { id: 'analytics', name: 'Daily Analytics', icon: '📊', component: ProgressChart, path: '/app/analytics' },
-    { id: 'coach', name: 'AI Maintenance Coach', icon: '🤖', component: MaintenanceCoach, path: '/app/coach' },
-    { id: 'recommendations', name: 'Personalized Plans', icon: '🧠', component: Recommendations, path: '/app/recommendations' },
+   
 ];
 
 const PATH_TO_MODULE_MAP = DASHBOARD_MENU.reduce((map, item) => {
