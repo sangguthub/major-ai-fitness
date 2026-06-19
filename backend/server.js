@@ -7,10 +7,10 @@ const app = express();
 
 // --- Middleware Configuration ---
 const corsOptions = {
-  origin: 'https://major-ai-fitness-zhqr.vercel.app', // Your Vercel frontend URL
+  origin: process.env.FRONTEND_URL, // Uses the variable from your Render dashboard
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true // Required for Authorization headers
+  credentials: true
 };
 
 app.use(cors(corsOptions)); // Use the specific configuration to resolve CORS
